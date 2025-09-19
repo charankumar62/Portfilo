@@ -1,159 +1,79 @@
-const questions = [
-  {
-    question: "What is the capital of India?",
-    answers: [
-      { text: "Mumbai", correct: false },
-      { text: "Delhi", correct: true },
-      { text: "Hyderabad", correct: false },
-      { text: "Kolkata", correct: false }
-    ]
-  },
-  {
-    question: "Which language runs in a web browser?",
-    answers: [
-      { text: "Java", correct: false },
-      { text: "C", correct: false },
-      { text: "Python", correct: false },
-      { text: "JavaScript", correct: true }
-    ]
-  },
-  {
-    question: "What does CSS stand for?",
-    answers: [
-      { text: "Central Style Sheets", correct: false },
-      { text: "Cascading Style Sheets", correct: true },
-      { text: "Cascading Simple Sheets", correct: false },
-      { text: "Cars SUVs Sailboats", correct: false }
-    ]
-  },
-  // 🔥 Personal Questions Start Here
-  {
-    question: "What is my name?",
-    answers: [
-      { text: "Charan Kumar", correct: true },
-      { text: "Sai", correct: false },
-      { text: "Vamsi", correct: false },
-      { text: "Teja", correct: false }
-    ]
-  },
-  {
-    question: "What is my Instagram page name?",
-    answers: [
-      { text: "KCKMemer", correct: false },
-      { text: "KCKMemeVerse", correct: true },
-      { text: "KCKInsta", correct: false },
-      { text: "CharanMemes", correct: false }
-    ]
-  },
-  {
-    question: "Which department do I belong to?",
-    answers: [
-      { text: "CSE", correct: true },
-      { text: "ECE", correct: false },
-      { text: "EEE", correct: false },
-      { text: "IT", correct: false }
-    ]
-  },
-  {
-    question: "Which city is my college in?",
-    answers: [
-      { text: "Hyderabad", correct: true },
-      { text: "Mumbai", correct: false },
-      { text: "Chennai", correct: false },
-      { text: "Bangalore", correct: false }
-    ]
-  },
-  {
-    question: "When is my birthday?",
-    answers: [
-      { text: "June 2", correct: true },
-      { text: "May 10", correct: false },
-      { text: "August 15", correct: false },
-      { text: "January 26", correct: false }
-    ]
-  }
-];
-
-const questionElement = document.getElementById("question");
-const answerButtons = document.getElementById("answer-buttons");
-const nextButton = document.getElementById("next-btn");
-
-let currentQuestionIndex = 0;
-let score = 0;
-
-function startQuiz() {
-  currentQuestionIndex = 0;
-  score = 0;
-  nextButton.innerText = "Next";
-  showQuestion();
-}
-
-function showQuestion() {
-  resetState();
-  let currentQuestion = questions[currentQuestionIndex];
-  questionElement.innerText = currentQuestion.question;
-
-  currentQuestion.answers.forEach(answer => {
-    const button = document.createElement("button");
-    button.innerText = answer.text;
-    button.classList.add("btn");
-    if (answer.correct) {
-      button.dataset.correct = answer.correct;
-    }
-    button.addEventListener("click", selectAnswer);
-    answerButtons.appendChild(button);
-  });
-}
-
-function resetState() {
-  nextButton.style.display = "none";
-  while (answerButtons.firstChild) {
-    answerButtons.removeChild(answerButtons.firstChild);
-  }
-}
-
-function selectAnswer(e) {
-  const selectedBtn = e.target;
-  const isCorrect = selectedBtn.dataset.correct === "true";
-  if (isCorrect) {
-    selectedBtn.style.backgroundColor = "green";
-    score++;
-  } else {
-    selectedBtn.style.backgroundColor = "red";
-  }
-
-  Array.from(answerButtons.children).forEach(button => {
-    button.disabled = true;
-    if (button.dataset.correct === "true") {
-      button.style.backgroundColor = "green";
-    }
-  });
-
-  nextButton.style.display = "block";
-}
-
-function showScore() {
-  resetState();
-  questionElement.innerText = `You scored ${score} out of ${questions.length}!`;
-  nextButton.innerText = "Play Again";
-  nextButton.style.display = "block";
-}
-
-function handleNextButton() {
-  currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
-    showQuestion();
-  } else {
-    showScore();
-  }
-}
-
-nextButton.addEventListener("click", () => {
-  if (currentQuestionIndex < questions.length) {
-    handleNextButton();
-  } else {
-    startQuiz();
-  }
+// Initialize AOS (Animate On Scroll)
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
 });
 
-startQuiz();
+// Typed.js initialization
+document.addEventListener('DOMContentLoaded', function() {
+    var typed = new Typed('#typed-text', {
+        strings: ['Web Developer', 'Python Developer', 'Tech Enthusiast'],
+        typeSpeed: 50,
+        backSpeed: 30,
+        backDelay: 1500,
+        loop: true
+    });
+});
+
+// Custom cursor
+document.addEventListener('DOMContentLoaded', function() {
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
+
+    document.addEventListener('mousemove', function(e) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+        cursorFollower.style.left = e.clientX + 'px';
+        cursorFollower.style.top = e.clientY + 'px';
+    });
+});
+
+// Preloader
+window.addEventListener('load', function() {
+    const preloader = document.querySelector('.preloader');
+    preloader.style.display = 'none';
+});
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Active navigation link highlighting
+window.addEventListener('scroll', function() {
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('.nav-link');
+    
+    sections.forEach(section => {
+        let top = section.offsetTop - 100;
+        let bottom = top + section.offsetHeight;
+        let scroll = window.scrollY;
+        let id = section.getAttribute('id');
+        
+        if (scroll >= top && scroll < bottom) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + id) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+});
+
+// Mobile menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+} 
