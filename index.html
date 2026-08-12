@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
     <style>
         /* General Body and Root Styles */
@@ -409,68 +410,44 @@
         }
 
         /* Skills Section */
-        .skills-content {
+        .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 50px;
-            max-width: 1200px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
             margin: auto;
-        }
-        .skill-card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            margin-bottom: 20px;
-        }
-        .skill-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        .skill-header i { font-size: 1.5rem; color: var(--primary-color); }
-        .skill-item { margin-bottom: 15px; }
-        .skill-bar {
-            width: 100%;
-            height: 10px;
-            background-color: #e9ecef;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-        .skill-progress {
-            height: 100%;
-            background-color: var(--primary-color);
-            border-radius: 5px;
-        }
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .skill-tag {
-            background-color: #e9ecef;
-            padding: 5px 15px;
-            border-radius: 15px;
-            font-size: 0.9rem;
-        }
-        .soft-skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .soft-skill {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
             text-align: center;
         }
-        .soft-skill i {
-            font-size: 2rem;
+
+        .skill-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--card-bg);
+            padding: 2rem 1rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
             color: var(--primary-color);
-            margin-bottom: 10px;
-            display: block;
+            margin-bottom: 1rem;
+        }
+        .skill-item h4 {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .skill-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0;
         }
         
         /* Projects Section */
@@ -536,12 +513,14 @@
             color: white;
             background: var(--primary-color);
             padding: 10px 20px;
+            border: 2px solid var(--primary-color);
             border-radius: 20px;
             display: inline-block;
-            transition: background 0.3s;
+            transition: background 0.3s, color 0.3s;
         }
         .project-link:hover {
-            background: #0056b3;
+            background: transparent;
+            color: var(--primary-color);
         }
 
         /* Services Section */
@@ -799,7 +778,7 @@
             <div class="hero-container">
                 <div class="hero-text" data-aos="fade-right">
                     <h1>Hi, I'm Charan Kumar Kodidala</h1>
-                    <p>A passionate developer focused on creating innovative solutions through technology.</p>
+                    <p>I'm a <span id="typed-text"></span></p>
                     <div class="cta-buttons">
                         <a href="#projects" class="cta-button primary">View My Work</a>
                         <a href="#about" class="cta-button secondary">About Me</a>
@@ -872,56 +851,46 @@
         <!-- Skills Section -->
         <section id="skills" class="skills-section">
             <h2 class="section-title" data-aos="fade-down">Skills & Expertise</h2>
-            <div class="skills-content">
-                <div class="technical-skills" data-aos="fade-right">
-                    <h3>Technical Skills</h3>
-                    <div class="skill-cards">
-                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="skill-header">
-                                <i class="fas fa-code"></i>
-                                <h4>Programming Languages</h4>
-                            </div>
-                            <div class="skill-items">
-                                <div class="skill-item"><span class="skill-name">Java</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 75%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item"><span class="skill-name">Python</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 60%"></div>
-                                    </div>
-                                </div>
-                                <div class="skill-item"><span class="skill-name">C</span>
-                                    <div class="skill-bar">
-                                        <div class="skill-progress" style="width: 50%"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="skill-header">
-                                <i class="fas fa-tools"></i>
-                                <h4>Tools & Technologies</h4>
-                            </div>
-                            <div class="skill-tags"><span class="skill-tag">AutoCAD</span><span
-                                    class="skill-tag">GitHub</span><span class="skill-tag">VS Code</span><span
-                                    class="skill-tag">Microsoft Office</span></div>
-                        </div>
-                    </div>
+            <div class="skills-grid">
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fab fa-java skill-icon"></i>
+                    <h4>Java</h4>
+                    <p>Core Java, Spring, Hibernate</p>
                 </div>
-                <div class="soft-skills" data-aos="fade-left">
-                    <h3>Soft Skills</h3>
-                    <div class="soft-skills-grid">
-                        <div class="soft-skill" data-aos="flip-left" data-aos-delay="100"><i class="fas fa-users"></i>
-                            <span>Team Collaboration</span></div>
-                        <div class="soft-skill" data-aos="flip-left" data-aos-delay="200"><i
-                                class="fas fa-microphone"></i> <span>Public Speaking</span></div>
-                        <div class="soft-skill" data-aos="flip-left" data-aos-delay="300"><i class="fas fa-search"></i>
-                            <span>Problem Solving</span></div>
-                        <div class="soft-skill" data-aos="flip-left" data-aos-delay="400"><i class="fas fa-book"></i>
-                            <span>Continuous Learning</span></div>
-                    </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fab fa-python skill-icon"></i>
+                    <h4>Python</h4>
+                    <p>Django, Flask, Data Science Libraries</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fab fa-js-square skill-icon"></i>
+                    <h4>JavaScript</h4>
+                    <p>React, Node.js, Express.js</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h4>HTML5</h4>
+                    <p>Semantic HTML, Web Accessibility</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <h4>CSS3</h4>
+                    <p>Flexbox, Grid, Animations</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h4>Databases</h4>
+                    <p>MySQL, PostgreSQL, MongoDB</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
+                    <i class="fab fa-git-alt skill-icon"></i>
+                    <h4>Version Control</h4>
+                    <p>Git, GitHub</p>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
+                    <i class="fas fa-wrench skill-icon"></i>
+                    <h4>Other Tools</h4>
+                    <p>AutoCAD, VS Code, Linux</p>
                 </div>
             </div>
         </section>
@@ -929,7 +898,7 @@
         <!-- Projects Section -->
         <section id="projects" class="projects-section">
             <h2 class="section-title" data-aos="fade-down">Featured Projects</h2>
-            <div class="projects-grid">
+            <div class="projects-grid" id="projects-grid">
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-content">
                         <div class="project-header"><i class="fas fa-gamepad"></i>
@@ -947,7 +916,7 @@
                         </ul>
                         <div class="project-links"><a
                                 href="https://github.com/charankumar62/ultimate-guessing-game"
-                                class="project-link primary" target="_blank"><i class="fab fa-github"></i> View
+                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
                                 Project</a></div>
                     </div>
                 </div>
@@ -968,7 +937,7 @@
                             <li><i class="fas fa-check"></i>Mobile-responsive design</li>
                         </ul>
                         <div class="project-links"><a href="https://github.com/charankumar62/kck-quiz-app"
-                                class="project-link primary" target="_blank"><i class="fab fa-github"></i> View
+                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
                                 Project</a></div>
                     </div>
                 </div>
@@ -990,7 +959,7 @@
                         </ul>
                         <div class="project-links"><a
                                 href="https://github.com/charankumar62/skills-introduction-to-github"
-                                class="project-link primary" target="_blank"><i class="fab fa-github"></i> View
+                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
                                 Project</a></div>
                     </div>
                 </div>
@@ -1013,8 +982,24 @@
                         </ul>
                         <div class="project-links"><a
                                 href="https://github.com/charankumar62/Charan-Kumar-Kodidala-portfilo"
-                                class="project-link primary" target="_blank"><i class="fab fa-github"></i> View
+                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
                                 Project</a></div>
+                    </div>
+                </div>
+            </div>
+            <!-- New AI Project Generator Section -->
+            <div class="ai-project-generator-container" style="max-width: 800px; margin: 80px auto; background-color: var(--card-bg); padding: 40px; border-radius: 20px; box-shadow: var(--shadow);" data-aos="fade-up">
+                <h3 style="font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: var(--primary-color);">✨ AI Project Idea Generator</h3>
+                <p style="text-align: center; color: #666; margin-bottom: 30px;">Describe a project idea and let the AI build a project card for you! This is a great way to explore new concepts.</p>
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    <textarea id="project-idea-input" rows="4" placeholder="e.g., A mobile app that tracks my running and shares my progress with friends" style="width: 100%; padding: 15px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem;"></textarea>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                        <button type="button" id="generate-project-btn" class="cta-button primary" style="padding: 12px 25px; font-size: 1rem; border-radius: 25px;">
+                            Generate Project ✨
+                        </button>
+                        <button type="button" id="clear-projects-btn" class="cta-button secondary" style="padding: 12px 25px; font-size: 1rem; border-radius: 25px;">
+                            Clear Generated Projects
+                        </button>
                     </div>
                 </div>
             </div>
@@ -1121,13 +1106,23 @@
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Initialize Animate on Scroll
+            // Initialize AOS (Animate On Scroll)
             AOS.init({
                 duration: 1000,
                 once: true,
-                offset: 100,
+                offset: 100
+            });
+
+            // Typed.js initialization
+            var typed = new Typed('#typed-text', {
+                strings: ['Web Developer', 'Python Developer', 'Tech Enthusiast'],
+                typeSpeed: 50,
+                backSpeed: 30,
+                backDelay: 1500,
+                loop: true
             });
 
             // Preloader
@@ -1150,10 +1145,12 @@
             // Navbar Toggle for Mobile
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinks = document.querySelector('.nav-links');
-            menuToggle.addEventListener('click', () => {
-                menuToggle.classList.toggle('active');
-                navLinks.classList.toggle('active');
-            });
+            if (menuToggle) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
             
             // Active Nav Link Highlighting on Scroll
             const sections = document.querySelectorAll('section');
@@ -1174,6 +1171,16 @@
                 })
             });
 
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
             // --- Gemini AI Assistant for Contact Form ---
             const aiAssistantBtn = document.getElementById('ai-assistant-btn');
             const messageTextarea = document.getElementById('message');
@@ -1182,11 +1189,37 @@
             const useSuggestionBtn = document.getElementById('use-suggestion-btn');
             const aiLoader = document.getElementById('ai-loader');
 
+            const API_ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=';
+            const API_KEY = ""; // Handled by environment
+
+            async function generateContentWithRetry(payload, retries = 3, delay = 1000) {
+                for (let i = 0; i < retries; i++) {
+                    try {
+                        const response = await fetch(API_ENDPOINT + API_KEY, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        if (response.ok) {
+                            return await response.json();
+                        } else if (response.status === 429) {
+                            console.warn('API rate limit exceeded. Retrying...');
+                            await new Promise(res => setTimeout(res, delay));
+                            delay *= 2; // Exponential backoff
+                        } else {
+                            throw new Error(`API call failed with status: ${response.status}`);
+                        }
+                    } catch (error) {
+                        console.error('Fetch error:', error);
+                        if (i === retries - 1) throw error;
+                    }
+                }
+            }
+
             aiAssistantBtn.addEventListener('click', async () => {
                 const userDraft = messageTextarea.value;
                 if (userDraft.trim().length < 10) {
-                    suggestionTextDiv.innerText = 'Please write a short draft (at least 10 characters) before using the AI assistant.';
-                    suggestionContainer.style.display = 'block';
+                    alert('Please write a short draft (at least 10 characters) before using the AI assistant.');
                     return;
                 }
 
@@ -1196,8 +1229,6 @@
                 try {
                     const systemPrompt = "You are a professional communication assistant for a portfolio website. The user is writing a message to Charan Kumar Kodidala, the portfolio owner. Take the user's draft message and rewrite it to be more professional, clear, and engaging, while retaining the original intent. Keep it concise and friendly.";
                     const userQuery = `Here is my draft message: "${userDraft}"`;
-                    const apiKey = ""; // API Key is handled by the environment
-                    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
 
                     const payload = {
                         contents: [{ parts: [{ text: userQuery }] }],
@@ -1206,27 +1237,14 @@
                         },
                     };
 
-                    const response = await fetch(apiUrl, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-
-                    if (!response.ok) {
-                        throw new Error(`API call failed with status: ${response.status}`);
-                    }
-
-                    const result = await response.json();
-                    const candidate = result.candidates?.[0];
-
-                    if (candidate && candidate.content?.parts?.[0]?.text) {
-                        const generatedText = candidate.content.parts[0].text;
+                    const result = await generateContentWithRetry(payload);
+                    const generatedText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (generatedText) {
                         suggestionTextDiv.innerText = generatedText;
                         suggestionContainer.style.display = 'block';
                     } else {
-                        throw new Error('Unexpected response format from the API.');
+                        throw new Error('Unexpected response format or empty response.');
                     }
-
                 } catch (error) {
                     console.error('Gemini API Error:', error);
                     suggestionTextDiv.innerText = 'Sorry, the AI assistant could not generate a suggestion at this time. Please try again later.';
@@ -1246,9 +1264,98 @@
                 messageTextarea.dispatchEvent(event);
                 messageTextarea.focus();
             });
+
+            // --- Gemini AI Project Idea Generator ---
+            const projectIdeaInput = document.getElementById('project-idea-input');
+            const generateProjectBtn = document.getElementById('generate-project-btn');
+            const clearProjectsBtn = document.getElementById('clear-projects-btn');
+            const projectsGrid = document.getElementById('projects-grid');
+
+            generateProjectBtn.addEventListener('click', async () => {
+                const projectIdea = projectIdeaInput.value;
+                if (projectIdea.trim().length < 10) {
+                    alert('Please enter a more detailed project idea.');
+                    return;
+                }
+
+                generateProjectBtn.innerText = 'Generating...';
+                generateProjectBtn.disabled = true;
+
+                try {
+                    const systemPrompt = "You are a creative AI assistant for a developer's portfolio. The user will provide a brief project idea, and you must generate a full project card in JSON format. The output should be a JSON object with the following properties: 'projectName' (string), 'description' (string), 'features' (array of 3-5 strings), and 'techStack' (array of 2-4 strings). All strings should be concise and professional.";
+                    const userQuery = `Generate a project based on the following idea: "${projectIdea}".`;
+
+                    const payload = {
+                        contents: [{ parts: [{ text: userQuery }] }],
+                        systemInstruction: {
+                            parts: [{ text: systemPrompt }]
+                        },
+                        generationConfig: {
+                            responseMimeType: "application/json",
+                            responseSchema: {
+                                type: "OBJECT",
+                                properties: {
+                                    "projectName": { "type": "STRING" },
+                                    "description": { "type": "STRING" },
+                                    "features": { "type": "ARRAY", "items": { "type": "STRING" }, "minItems": 3, "maxItems": 5 },
+                                    "techStack": { "type": "ARRAY", "items": { "type": "STRING" }, "minItems": 2, "maxItems": 4 }
+                                },
+                                "propertyOrdering": ["projectName", "description", "features", "techStack"]
+                            }
+                        }
+                    };
+
+                    const result = await generateContentWithRetry(payload);
+                    const generatedJsonString = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (generatedJsonString) {
+                        const newProject = JSON.parse(generatedJsonString);
+                        addProjectCardToDOM(newProject);
+                        projectIdeaInput.value = ''; // Clear the input
+                    } else {
+                        throw new Error('Could not generate a project idea.');
+                    }
+                } catch (error) {
+                    console.error('Project generation error:', error);
+                    alert('Sorry, I couldn\'t generate a project idea at this time. Please try again.');
+                } finally {
+                    generateProjectBtn.innerText = 'Generate Project ✨';
+                    generateProjectBtn.disabled = false;
+                }
+            });
+
+            clearProjectsBtn.addEventListener('click', () => {
+                const generatedProjects = projectsGrid.querySelectorAll('.generated-project-card');
+                generatedProjects.forEach(card => card.remove());
+            });
+
+            function addProjectCardToDOM(project) {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card generated-project-card';
+                projectCard.setAttribute('data-aos', 'fade-up');
+                
+                const featuresList = project.features.map(feature => `<li><i class="fas fa-check"></i>${feature}</li>`).join('');
+                const techStackTags = project.techStack.map(tech => `<span class="tech-tag">${tech}</span>`).join('');
+
+                projectCard.innerHTML = `
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-magic"></i>
+                            <h3>${project.projectName}</h3>
+                        </div>
+                        <div class="project-tech-stack">${techStackTags}</div>
+                        <p>${project.description}</p>
+                        <ul class="project-features">
+                            ${featuresList}
+                        </ul>
+                        <div class="project-links">
+                            <span class="project-link" style="background-color: #6c757d; cursor: default;">AI Generated</span>
+                        </div>
+                    </div>
+                `;
+                projectsGrid.appendChild(projectCard);
+            }
         });
     </script>
 </body>
 
 </html>
-
