@@ -465,14 +465,24 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
+
+        .project-image {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            display: block;
+            border-bottom: 3px solid var(--primary-color);
+        }
         
-        .project-content { padding: 25px; }
+        .project-content { padding: 25px; flex: 1; display: flex; flex-direction: column; }
         .project-header {
             display: flex;
             align-items: center;
@@ -507,7 +517,7 @@
             gap: 10px;
         }
         .project-features i { color: var(--primary-color); }
-        .project-links { margin-top: 20px; }
+        .project-links { margin-top: auto; padding-top: 20px; }
         .project-link {
             text-decoration: none;
             color: white;
@@ -1078,7 +1088,7 @@
                             <span class="stat-number">2+</span><span class="stat-label">Years Coding</span>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
-                            <span class="stat-number">9+</span><span class="stat-label">Projects</span>
+                            <span class="stat-number">8</span><span class="stat-label">Projects</span>
                         </div>
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
                             <span class="stat-number">11+</span><span class="stat-label">Certifications</span>
@@ -1212,98 +1222,70 @@
             <h2 class="section-title" data-aos="fade-down">Featured Projects</h2>
             <div class="projects-grid" id="projects-grid">
                 <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <img class="project-image" src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop" alt="Ultimate Guessing Game">
                     <div class="project-content">
-                        <div class="project-header"><i class="fas fa-gamepad"></i>
-                            <h3>Ultimate Guessing Game</h3>
-                        </div>
+                        <div class="project-header"><i class="fas fa-gamepad"></i><h3>Ultimate Guessing Game</h3></div>
                         <div class="project-tech">Python (100%)</div>
-                        <p>A fun and interactive Python number guessing game where you try to guess a secret number between
-                            1 and 100 in as few attempts as possible.</p>
+                        <p>A fun and interactive Python number guessing game where you try to guess a secret number between 1 and 100 in as few attempts as possible.</p>
                         <ul class="project-features">
                             <li><i class="fas fa-check"></i>Smart input validation</li>
                             <li><i class="fas fa-check"></i>Dynamic score tracking</li>
                             <li><i class="fas fa-check"></i>Instant feedback system</li>
                             <li><i class="fas fa-check"></i>Replay functionality</li>
-                            <li><i class="fas fa-check"></i>Performance feedback</li>
                         </ul>
-                        <div class="project-links"><a
-                                href="https://github.com/charankumar62/ultimate-guessing-game"
-                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
-                                Project</a></div>
+                        <div class="project-links"><a href="https://github.com/charankumar62/ultimate-guessing-game" class="project-link" target="_blank"><i class="fab fa-github"></i> View Project</a></div>
                     </div>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <img class="project-image" src="https://images.unsplash.com/photo-1606326608606-aa0b6299f228?w=600&h=400&fit=crop" alt="KCK Quiz App">
                     <div class="project-content">
-                        <div class="project-header"><i class="fas fa-question-circle"></i>
-                            <h3>KCK Quiz App</h3>
-                        </div>
-                        <div class="project-tech-stack"><span class="tech-tag">JavaScript (58.8%)</span><span
-                                class="tech-tag">CSS (23.8%)</span><span class="tech-tag">HTML (17.4%)</span></div>
-                        <p>A modern quiz web application with a clean user interface, featuring a custom logo and
-                            responsive design. Created as part of IIT micro project.</p>
+                        <div class="project-header"><i class="fas fa-question-circle"></i><h3>KCK Quiz App</h3></div>
+                        <div class="project-tech-stack"><span class="tech-tag">JavaScript (58.8%)</span><span class="tech-tag">CSS (23.8%)</span><span class="tech-tag">HTML (17.4%)</span></div>
+                        <p>A modern quiz web application with a clean user interface, featuring a custom logo and responsive design. Created as part of IIT micro project.</p>
                         <ul class="project-features">
                             <li><i class="fas fa-check"></i>Custom KCK branding</li>
                             <li><i class="fas fa-check"></i>Interactive start screen</li>
                             <li><i class="fas fa-check"></i>Dynamic question loading</li>
-                            <li><i class="fas fa-check"></i>Encouraging messages</li>
                             <li><i class="fas fa-check"></i>Mobile-responsive design</li>
                         </ul>
-                        <div class="project-links"><a href="https://github.com/charankumar62/kck-quiz-app"
-                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
-                                Project</a></div>
+                        <div class="project-links"><a href="https://github.com/charankumar62/kck-quiz-app" class="project-link" target="_blank"><i class="fab fa-github"></i> View Project</a></div>
                     </div>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <img class="project-image" src="https://images.unsplash.com/photo-1618401471358-bb1c679544fd?w=600&h=400&fit=crop" alt="GitHub Skills Project">
                     <div class="project-content">
-                        <div class="project-header"><i class="fab fa-github"></i>
-                            <h3>GitHub Skills Project</h3>
-                        </div>
-                        <div class="project-tech-stack"><span class="tech-tag">Git</span><span
-                                class="tech-tag">GitHub</span><span class="tech-tag">Markdown</span></div>
-                        <p>A comprehensive introduction to GitHub workflow and best practices, demonstrating
-                            proficiency in version control and collaborative development.</p>
+                        <div class="project-header"><i class="fab fa-github"></i><h3>GitHub Skills Project</h3></div>
+                        <div class="project-tech-stack"><span class="tech-tag">Git</span><span class="tech-tag">GitHub</span><span class="tech-tag">Markdown</span></div>
+                        <p>A comprehensive introduction to GitHub workflow and best practices, demonstrating proficiency in version control and collaborative development.</p>
                         <ul class="project-features">
                             <li><i class="fas fa-check"></i>Repository management</li>
                             <li><i class="fas fa-check"></i>Branch creation and handling</li>
-                            <li><i class="fas fa-check"></i>Commit management</li>
                             <li><i class="fas fa-check"></i>Pull request workflow</li>
                             <li><i class="fas fa-check"></i>Markdown documentation</li>
                         </ul>
-                        <div class="project-links"><a
-                                href="https://github.com/charankumar62/skills-introduction-to-github"
-                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
-                                Project</a></div>
+                        <div class="project-links"><a href="https://github.com/charankumar62/skills-introduction-to-github" class="project-link" target="_blank"><i class="fab fa-github"></i> View Project</a></div>
                     </div>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <img class="project-image" src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop" alt="KCK Brand Portfolio">
                     <div class="project-content">
-                        <div class="project-header"><i class="fas fa-briefcase"></i>
-                            <h3>KCK Brand Portfolio</h3>
-                        </div>
-                        <div class="project-tech-stack"><span class="tech-tag">CSS (49.2%)</span><span
-                                class="tech-tag">HTML (39.4%)</span><span class="tech-tag">JavaScript (11.4%)</span>
-                        </div>
-                        <p>A professional portfolio website showcasing my personal brand (KCK) and professional journey.
-                            Features a modern design with responsive layout and interactive elements.</p>
+                        <div class="project-header"><i class="fas fa-briefcase"></i><h3>KCK Brand Portfolio</h3></div>
+                        <div class="project-tech-stack"><span class="tech-tag">CSS (49.2%)</span><span class="tech-tag">HTML (39.4%)</span><span class="tech-tag">JavaScript (11.4%)</span></div>
+                        <p>A professional portfolio website showcasing my personal brand (KCK) and professional journey with modern design and interactive elements.</p>
                         <ul class="project-features">
                             <li><i class="fas fa-check"></i>Personal branding with KCK logo</li>
                             <li><i class="fas fa-check"></i>Responsive design</li>
-                            <li><i class="fas fa-check"></i>Interactive UI elements</li>
                             <li><i class="fas fa-check"></i>Project showcase</li>
                             <li><i class="fas fa-check"></i>Resume integration</li>
                         </ul>
-                        <div class="project-links"><a
-                                href="https://github.com/charankumar62/Charan-Kumar-Kodidala-portfilo"
-                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
-                                Project</a></div>
+                        <div class="project-links"><a href="https://github.com/charankumar62/Charan-Kumar-Kodidala-portfilo" class="project-link" target="_blank"><i class="fab fa-github"></i> View Project</a></div>
                     </div>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <img class="project-image" src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=600&h=400&fit=crop" alt="Python Pet Game">
                     <div class="project-content">
-                        <div class="project-header"><i class="fas fa-paw"></i>
-                            <h3>Python Pet Game</h3>
-                        </div>
-                        <div class="project-tech">Python</div>
+                        <div class="project-header"><i class="fas fa-paw"></i><h3>Python Pet Game</h3></div>
+                        <div class="project-tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Great Learning Certified</span></div>
                         <p>Interactive virtual pet game with feeding, playing, and health tracking mechanics built using Python.</p>
                         <ul class="project-features">
                             <li><i class="fas fa-check"></i>Virtual pet care mechanics</li>
@@ -1314,11 +1296,10 @@
                     </div>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <img class="project-image" src="https://images.unsplash.com/photo-1511882150382-fdca79436183?w=600&h=400&fit=crop" alt="Rock Paper Scissors">
                     <div class="project-content">
-                        <div class="project-header"><i class="fas fa-hand-rock"></i>
-                            <h3>Rock Paper Scissors</h3>
-                        </div>
-                        <div class="project-tech">Python</div>
+                        <div class="project-header"><i class="fas fa-hand-rock"></i><h3>Rock Paper Scissors</h3></div>
+                        <div class="project-tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Great Learning Certified</span></div>
                         <p>Command-line Rock Paper Scissors game with randomized computer opponent, score tracking, and replay functionality.</p>
                         <ul class="project-features">
                             <li><i class="fas fa-check"></i>Randomized gameplay</li>
@@ -1329,11 +1310,10 @@
                     </div>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                    <img class="project-image" src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&h=400&fit=crop" alt="SQL Database Project">
                     <div class="project-content">
-                        <div class="project-header"><i class="fas fa-database"></i>
-                            <h3>SQL Database Project</h3>
-                        </div>
-                        <div class="project-tech">SQL</div>
+                        <div class="project-header"><i class="fas fa-database"></i><h3>SQL Database Project</h3></div>
+                        <div class="project-tech-stack"><span class="tech-tag">SQL</span><span class="tech-tag">MySQL</span><span class="tech-tag">Great Learning Certified</span></div>
                         <p>Relational database project applying CRUD operations, joins, and aggregations to solve real-world data problems.</p>
                         <ul class="project-features">
                             <li><i class="fas fa-check"></i>Schema design</li>
@@ -1344,11 +1324,10 @@
                     </div>
                 </div>
                 <div class="project-card" data-aos="fade-up" data-aos-delay="800">
+                    <img class="project-image" src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=600&h=400&fit=crop" alt="Trivia Quiz Game">
                     <div class="project-content">
-                        <div class="project-header"><i class="fas fa-brain"></i>
-                            <h3>Trivia Quiz Game</h3>
-                        </div>
-                        <div class="project-tech">Python</div>
+                        <div class="project-header"><i class="fas fa-brain"></i><h3>Trivia Quiz Game</h3></div>
+                        <div class="project-tech-stack"><span class="tech-tag">Python</span><span class="tech-tag">Great Learning Certified</span></div>
                         <p>Interactive trivia quiz application with multiple-choice questions, dynamic loading, and instant scoring feedback.</p>
                         <ul class="project-features">
                             <li><i class="fas fa-check"></i>Multiple-choice questions</li>
