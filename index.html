@@ -512,6 +512,19 @@
         .cert-preview-card.internship { border-top-color: #28a745; }
         .cert-preview-card.workshop { border-top-color: #fd7e14; }
         .cert-preview-card.course { border-top-color: #007bff; }
+        .cert-preview-card.project { border-top-color: #6f42c1; }
+
+        .cert-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin: 10px auto 28px;
+            max-width: 1200px;
+        }
+
+        .cert-subtitle + .cert-preview-grid {
+            margin-bottom: 45px;
+        }
 
         .cert-preview-card:hover {
             transform: translateY(-8px);
@@ -1000,6 +1013,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="hamburger" aria-label="Toggle menu">
@@ -1242,6 +1256,113 @@
         </div>
     </section>
 
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-preview-section">
+        <h2 class="section-title" data-aos="fade-down">Certificates</h2>
+        <p class="cert-preview-intro" data-aos="fade-up">Internship, workshop, course &amp; project certificates. Click any certificate to view full size.</p>
+
+        <h3 class="cert-subtitle" data-aos="fade-up">Internship &amp; Professional</h3>
+        <div class="cert-preview-grid">
+            <div class="cert-preview-card internship" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-viewer" data-view="certificates/bluestock-internship.jpg" data-title="Bluestock Fintech Internship">
+                    <span class="cert-badge">Internship</span>
+                    <img src="certificates/bluestock-internship.jpg" alt="Bluestock Fintech SDE Internship Certificate">
+                </div>
+                <div class="cert-preview-body">
+                    <h3>Certificate of Internship – SDE</h3>
+                    <p class="cert-issuer">Bluestock Fintech</p>
+                    <ul class="cert-details">
+                        <li>Sep – Oct 2025 · ID: BFSD60645</li>
+                    </ul>
+                    <button type="button" class="view-cert-btn" data-view="certificates/bluestock-internship.jpg" data-title="Bluestock Fintech Internship"><i class="fas fa-expand"></i> View Certificate</button>
+                </div>
+            </div>
+            <div class="cert-preview-card workshop" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-viewer" data-view="certificates/reliance-digital-ai-masterclass-preview.jpg" data-title="AI Prompt Engineering Masterclass">
+                    <span class="cert-badge">Workshop</span>
+                    <img src="certificates/reliance-digital-ai-masterclass-preview.jpg" alt="Reliance Digital AI Masterclass Certificate">
+                </div>
+                <div class="cert-preview-body">
+                    <h3>AI Prompt Engineering Masterclass</h3>
+                    <p class="cert-issuer">Reliance Digital · AI School</p>
+                    <ul class="cert-details">
+                        <li>September 2025 · Microsoft Partner</li>
+                    </ul>
+                    <button type="button" class="view-cert-btn" data-view="certificates/reliance-digital-ai-masterclass-preview.jpg" data-title="AI Prompt Engineering Masterclass"><i class="fas fa-expand"></i> View Certificate</button>
+                </div>
+            </div>
+            <div class="cert-preview-card course" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-viewer" data-view="certificates/python-programming-preview.jpg" data-title="Programming with Python 3.X">
+                    <span class="cert-badge">Course</span>
+                    <img src="certificates/python-programming-preview.jpg" alt="Simplilearn Python Certificate">
+                </div>
+                <div class="cert-preview-body">
+                    <h3>Programming with Python 3.X</h3>
+                    <p class="cert-issuer">Simplilearn SkillUp</p>
+                    <ul class="cert-details">
+                        <li>Aug 2026 · Code: 10569067</li>
+                    </ul>
+                    <button type="button" class="view-cert-btn" data-view="certificates/python-programming-preview.jpg" data-title="Programming with Python 3.X"><i class="fas fa-expand"></i> View Certificate</button>
+                </div>
+            </div>
+        </div>
+
+        <h3 class="cert-subtitle" data-aos="fade-up">Great Learning Project Certificates</h3>
+        <div class="cert-preview-grid">
+            <div class="cert-preview-card project" data-aos="fade-up" data-aos-delay="100">
+                <div class="cert-viewer" data-view="certificates/python-pet-game-preview.svg" data-verify="https://www.mygreatlearning.com/project-certificate/PC-ABE351D9DE3BF1BE" data-title="Python Pet Game">
+                    <span class="cert-badge">Project</span>
+                    <img src="certificates/python-pet-game-preview.svg" alt="Python Pet Game Certificate">
+                </div>
+                <div class="cert-preview-body">
+                    <h3>Python Pet Game</h3>
+                    <p class="cert-issuer">Great Learning</p>
+                    <ul class="cert-details"><li>PC-ABE351D9DE3BF1BE</li></ul>
+                    <button type="button" class="view-cert-btn" data-view="certificates/python-pet-game-preview.svg" data-verify="https://www.mygreatlearning.com/project-certificate/PC-ABE351D9DE3BF1BE" data-title="Python Pet Game"><i class="fas fa-expand"></i> View Certificate</button>
+                </div>
+            </div>
+            <div class="cert-preview-card project" data-aos="fade-up" data-aos-delay="200">
+                <div class="cert-viewer" data-view="certificates/rock-paper-scissors-preview.svg" data-verify="https://www.mygreatlearning.com/project-certificate/PC-2D26DAF27B6EC9DD" data-title="Rock Paper Scissors">
+                    <span class="cert-badge">Project</span>
+                    <img src="certificates/rock-paper-scissors-preview.svg" alt="Rock Paper Scissors Certificate">
+                </div>
+                <div class="cert-preview-body">
+                    <h3>Rock Paper Scissors</h3>
+                    <p class="cert-issuer">Great Learning</p>
+                    <ul class="cert-details"><li>PC-2D26DAF27B6EC9DD</li></ul>
+                    <button type="button" class="view-cert-btn" data-view="certificates/rock-paper-scissors-preview.svg" data-verify="https://www.mygreatlearning.com/project-certificate/PC-2D26DAF27B6EC9DD" data-title="Rock Paper Scissors"><i class="fas fa-expand"></i> View Certificate</button>
+                </div>
+            </div>
+            <div class="cert-preview-card project" data-aos="fade-up" data-aos-delay="300">
+                <div class="cert-viewer" data-view="certificates/sql-project-preview.svg" data-verify="https://www.mygreatlearning.com/project-certificate/PC-BF59BAEE7CF69010" data-title="SQL Database Project">
+                    <span class="cert-badge">Project</span>
+                    <img src="certificates/sql-project-preview.svg" alt="SQL Project Certificate">
+                </div>
+                <div class="cert-preview-body">
+                    <h3>SQL Database Project</h3>
+                    <p class="cert-issuer">Great Learning</p>
+                    <ul class="cert-details"><li>PC-BF59BAEE7CF69010</li></ul>
+                    <button type="button" class="view-cert-btn" data-view="certificates/sql-project-preview.svg" data-verify="https://www.mygreatlearning.com/project-certificate/PC-BF59BAEE7CF69010" data-title="SQL Database Project"><i class="fas fa-expand"></i> View Certificate</button>
+                </div>
+            </div>
+            <div class="cert-preview-card project" data-aos="fade-up" data-aos-delay="400">
+                <div class="cert-viewer" data-view="certificates/trivia-quiz-game-preview.svg" data-verify="https://www.mygreatlearning.com/project-certificate/PC-E0CC60D8B9EE7E07" data-title="Trivia Quiz Game">
+                    <span class="cert-badge">Project</span>
+                    <img src="certificates/trivia-quiz-game-preview.svg" alt="Trivia Quiz Game Certificate">
+                </div>
+                <div class="cert-preview-body">
+                    <h3>Trivia Quiz Game</h3>
+                    <p class="cert-issuer">Great Learning</p>
+                    <ul class="cert-details"><li>PC-E0CC60D8B9EE7E07</li></ul>
+                    <button type="button" class="view-cert-btn" data-view="certificates/trivia-quiz-game-preview.svg" data-verify="https://www.mygreatlearning.com/project-certificate/PC-E0CC60D8B9EE7E07" data-title="Trivia Quiz Game"><i class="fas fa-expand"></i> View Certificate</button>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-certs" data-aos="fade-up">
+            <a href="certificates.html">View All Certificates Page <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <h2 class="section-title" data-aos="fade-down">Get In Touch</h2>
@@ -1304,6 +1425,7 @@
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
