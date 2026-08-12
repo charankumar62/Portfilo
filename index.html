@@ -61,18 +61,11 @@
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
-        /* Custom Cursor */
-        .cursor,
-        .cursor-follower {
+        .cursor, .cursor-follower {
             position: fixed;
             top: 0;
             left: 0;
@@ -81,11 +74,9 @@
             z-index: 9999;
             display: none;
         }
-        
+
         @media (min-width: 992px) {
-            .cursor, .cursor-follower {
-                display: block;
-            }
+            .cursor, .cursor-follower { display: block; }
         }
 
         .cursor {
@@ -103,7 +94,6 @@
             transition: transform 0.1s linear;
         }
 
-        /* Navbar Styles */
         .navbar {
             position: fixed;
             top: 0;
@@ -113,7 +103,6 @@
             backdrop-filter: blur(10px);
             z-index: 1000;
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
-            transition: top 0.3s;
         }
 
         .nav-content {
@@ -134,9 +123,7 @@
             align-items: center;
         }
 
-        .logo-text {
-            margin-right: 5px;
-        }
+        .logo-text { margin-right: 5px; }
 
         .logo-dot {
             width: 8px;
@@ -173,14 +160,10 @@
         }
 
         .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--primary-color);
-        }
+        .nav-links a.active { color: var(--primary-color); }
 
         .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
+        .nav-links a.active::after { width: 100%; }
 
         .menu-toggle {
             display: none;
@@ -196,11 +179,8 @@
             border-radius: 5px;
             transition: all 0.3s ease-in-out;
         }
-        
-        /* Section Styles */
-        section {
-             padding: 100px 20px;
-        }
+
+        section { padding: 100px 20px; }
 
         .section-title {
             text-align: center;
@@ -222,7 +202,6 @@
             border-radius: 2px;
         }
 
-        /* Hero Section */
         .hero-section {
             min-height: 100vh;
             display: flex;
@@ -244,16 +223,15 @@
             margin-bottom: 1rem;
             color: #333;
         }
+
         .hero-text p {
             font-size: 1.2rem;
             color: #666;
             margin-bottom: 2rem;
         }
 
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-        }
+        .cta-buttons { display: flex; gap: 1rem; }
+
         .cta-button {
             padding: 12px 25px;
             border-radius: 25px;
@@ -261,25 +239,28 @@
             font-weight: 600;
             transition: all 0.3s ease;
         }
+
         .cta-button.primary {
             background-color: var(--primary-color);
             color: white;
             border: 2px solid var(--primary-color);
         }
+
         .cta-button.primary:hover {
             background-color: transparent;
             color: var(--primary-color);
         }
+
         .cta-button.secondary {
-             background-color: transparent;
+            background-color: transparent;
             color: var(--secondary-color);
             border: 2px solid var(--secondary-color);
         }
-         .cta-button.secondary:hover {
+
+        .cta-button.secondary:hover {
             background-color: var(--secondary-color);
             color: white;
         }
-
 
         .hero-image {
             position: relative;
@@ -299,19 +280,13 @@
         }
 
         .hero-image::before {
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             border-color: var(--primary-color);
             border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
         }
 
         .hero-image::after {
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
+            top: -10px; left: -10px; right: -10px; bottom: -10px;
             border-color: #333;
             border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
             animation-direction: reverse;
@@ -335,28 +310,13 @@
         }
 
         @keyframes morphing {
-            0% {
-                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            }
-
-            25% {
-                border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-            }
-
-            50% {
-                border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-            }
-
-            75% {
-                border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-            }
-
-            100% {
-                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            }
+            0% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+            25% { border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%; }
+            50% { border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%; }
+            75% { border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%; }
+            100% { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
         }
-        
-        /* About Section */
+
         .about-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -365,7 +325,9 @@
             margin: auto;
             align-items: flex-start;
         }
+
         .bio-text p { margin-bottom: 1rem; }
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -373,27 +335,29 @@
             margin-top: 30px;
             text-align: center;
         }
+
         .stat-item {
             background: var(--card-bg);
             padding: 20px;
             border-radius: 10px;
             box-shadow: var(--shadow);
         }
+
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
             color: var(--primary-color);
             display: block;
         }
+
         .timeline {
             position: relative;
             padding-left: 30px;
             border-left: 2px solid var(--primary-color);
         }
-        .timeline-item {
-            margin-bottom: 30px;
-            position: relative;
-        }
+
+        .timeline-item { margin-bottom: 30px; position: relative; }
+
         .timeline-dot {
             position: absolute;
             left: -39px;
@@ -404,12 +368,9 @@
             border: 3px solid var(--primary-color);
             border-radius: 50%;
         }
-        .timeline-date {
-            font-style: italic;
-            color: #777;
-        }
 
-        /* Skills Section */
+        .timeline-date { font-style: italic; color: #777; }
+
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -440,17 +401,10 @@
             color: var(--primary-color);
             margin-bottom: 1rem;
         }
-        .skill-item h4 {
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-        .skill-item p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-top: 0;
-        }
-        
-        /* Projects Section */
+
+        .skill-item h4 { margin-bottom: 0.5rem; font-weight: 600; }
+        .skill-item p { font-size: 0.9rem; color: #666; margin-top: 0; }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -471,43 +425,52 @@
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        
+
         .project-content { padding: 25px; }
+
         .project-header {
             display: flex;
             align-items: center;
             gap: 15px;
             margin-bottom: 10px;
         }
+
         .project-header i { font-size: 1.5rem; color: var(--primary-color); }
+
         .project-tech, .project-tech-stack {
             font-size: 0.9rem;
             color: #777;
             margin-bottom: 15px;
         }
+
         .project-tech-stack {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
+
         .tech-tag {
             background: #e9ecef;
             padding: 3px 10px;
             border-radius: 12px;
         }
+
         .project-features {
             list-style: none;
             padding: 0;
             margin: 15px 0;
         }
+
         .project-features li {
             margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .project-features i { color: var(--primary-color); }
         .project-links { margin-top: 20px; }
+
         .project-link {
             text-decoration: none;
             color: white;
@@ -518,12 +481,12 @@
             display: inline-block;
             transition: background 0.3s, color 0.3s;
         }
+
         .project-link:hover {
             background: transparent;
             color: var(--primary-color);
         }
 
-        /* Services Section */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -531,6 +494,7 @@
             max-width: 900px;
             margin: auto;
         }
+
         .service-card {
             background: var(--card-bg);
             padding: 30px;
@@ -538,20 +502,16 @@
             box-shadow: var(--shadow);
             text-align: center;
         }
+
         .service-icon i {
             font-size: 3rem;
             color: var(--primary-color);
             margin-bottom: 20px;
         }
-        .service-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        .service-card li {
-            margin-bottom: 10px;
-        }
 
-        /* Experience Section */
+        .service-card ul { list-style: none; padding: 0; }
+        .service-card li { margin-bottom: 10px; }
+
         .experience-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -573,9 +533,7 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
 
-        .experience-content {
-            padding: 25px;
-        }
+        .experience-content { padding: 25px; }
 
         .experience-header {
             display: flex;
@@ -595,226 +553,6 @@
             margin-bottom: 15px;
         }
 
-        /* Certifications Section */
-        .cert-intro {
-            max-width: 900px;
-            margin: -20px auto 40px;
-            text-align: center;
-            color: #555;
-            font-size: 1.05rem;
-            line-height: 1.7;
-        }
-
-        .cert-summary {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 20px;
-            max-width: 900px;
-            margin: 0 auto 50px;
-        }
-
-        .cert-summary-item {
-            background: var(--card-bg);
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-            text-align: center;
-        }
-
-        .cert-summary-item strong {
-            display: block;
-            font-size: 1.8rem;
-            color: var(--primary-color);
-            margin-bottom: 4px;
-        }
-
-        .cert-summary-item span {
-            font-size: 0.9rem;
-            color: #666;
-        }
-
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .cert-card {
-            background: var(--card-bg);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border-top: 4px solid var(--primary-color);
-        }
-
-        .cert-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .cert-card.internship { border-top-color: #28a745; }
-        .cert-card.course { border-top-color: #007bff; }
-        .cert-card.project { border-top-color: #6f42c1; }
-        .cert-card.workshop { border-top-color: #fd7e14; }
-
-        .cert-preview {
-            height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .cert-preview img,
-        .cert-preview iframe,
-        .cert-preview-link {
-            width: 100%;
-            height: 100%;
-            display: block;
-        }
-
-        .cert-preview img {
-            object-fit: contain;
-            background: #fff;
-        }
-
-        .cert-preview-link {
-            text-decoration: none;
-        }
-
-        .cert-preview i {
-            font-size: 3rem;
-            color: var(--primary-color);
-        }
-
-        .cert-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            background: rgba(255, 255, 255, 0.95);
-            color: var(--primary-color);
-            font-size: 0.72rem;
-            font-weight: 700;
-            padding: 4px 10px;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .cert-card.internship .cert-badge { color: #28a745; }
-        .cert-card.project .cert-badge { color: #6f42c1; }
-        .cert-card.workshop .cert-badge { color: #fd7e14; }
-
-        .cert-content {
-            padding: 22px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .cert-content h3 {
-            font-size: 1.1rem;
-            margin: 0 0 6px;
-            line-height: 1.4;
-        }
-
-        .cert-issuer {
-            font-size: 0.88rem;
-            color: #007bff;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .cert-details {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 12px;
-            font-size: 0.85rem;
-            color: #555;
-        }
-
-        .cert-details li {
-            margin-bottom: 6px;
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-
-        .cert-details i {
-            color: var(--primary-color);
-            margin-top: 3px;
-            width: 14px;
-            flex-shrink: 0;
-        }
-
-        .cert-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 14px;
-        }
-
-        .cert-skill-tag {
-            background: #e9ecef;
-            color: #444;
-            font-size: 0.75rem;
-            padding: 3px 10px;
-            border-radius: 12px;
-            font-weight: 500;
-        }
-
-        .cert-desc {
-            font-size: 0.88rem;
-            color: #666;
-            margin-bottom: 14px;
-            line-height: 1.5;
-        }
-
-        .cert-actions {
-            margin-top: auto;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .cert-link {
-            text-decoration: none;
-            color: white;
-            background: var(--primary-color);
-            font-weight: 600;
-            font-size: 0.85rem;
-            padding: 8px 16px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: background 0.3s, color 0.3s;
-            border: 2px solid var(--primary-color);
-        }
-
-        .cert-link:hover {
-            background: transparent;
-            color: var(--primary-color);
-        }
-
-        .cert-link.verify {
-            background: transparent;
-            color: var(--primary-color);
-        }
-
-        .cert-link.verify:hover {
-            background: var(--primary-color);
-            color: white;
-        }
-
-        /* Contact Section */
         .contact-section {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
@@ -834,6 +572,7 @@
             color: #333;
             position: relative;
         }
+
         .contact-info h2::after {
             content: '';
             position: absolute;
@@ -843,12 +582,15 @@
             height: 3px;
             background: var(--primary-color);
         }
+
         .contact-details { margin-top: 30px; }
+
         .contact-item {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
+
         .contact-item i {
             width: 40px;
             height: 40px;
@@ -896,7 +638,7 @@
         }
 
         .form-group textarea { height: 150px; resize: none; }
-        
+
         .form-group input:focus, .form-group textarea:focus {
             border-color: var(--primary-color);
             outline: none;
@@ -923,6 +665,7 @@
             cursor: pointer;
             width: 100%;
         }
+
         .submit-btn:hover { background: #0056b3; }
 
         .social-links {
@@ -930,6 +673,7 @@
             gap: 15px;
             margin-top: 30px;
         }
+
         .social-link {
             width: 40px;
             height: 40px;
@@ -942,31 +686,27 @@
             text-decoration: none;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .social-link:hover {
             background: var(--primary-color);
             color: white;
         }
 
-        /* Footer */
         .footer {
             text-align: center;
             padding: 30px 20px;
             background: #e9ecef;
         }
-        .footer-content {
-            max-width: 1200px;
-            margin: auto;
-        }
-        .footer-links {
-            margin-top: 10px;
-        }
+
+        .footer-content { max-width: 1200px; margin: auto; }
+        .footer-links { margin-top: 10px; }
+
         .footer-links a {
             margin: 0 10px;
             text-decoration: none;
             color: var(--secondary-color);
         }
 
-        /* Responsive Design */
         @media (max-width: 992px) {
             .nav-links {
                 position: absolute;
@@ -988,33 +728,22 @@
         }
 
         @media (max-width: 768px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
+            .hero-container { grid-template-columns: 1fr; text-align: center; }
             .hero-text { order: 2; }
             .hero-image { order: 1; width: 280px; height: 280px; }
             .cta-buttons { justify-content: center; }
             .contact-container { grid-template-columns: 1fr; }
             .contact-info { text-align: center; }
             .contact-info h2::after { left: 50%; transform: translateX(-50%); }
-            .certifications-grid { grid-template-columns: 1fr; }
-            .cert-intro { font-size: 0.95rem; padding: 0 10px; }
         }
     </style>
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader"></div>
-    </div>
-
-    <!-- Custom Cursor -->
+    <div class="preloader"><div class="loader"></div></div>
     <div class="cursor"></div>
     <div class="cursor-follower"></div>
 
-    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-content">
             <a href="#home" class="logo">
@@ -1038,9 +767,7 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main>
-        <!-- Hero Section -->
         <section class="hero-section" id="home">
             <div class="hero-container">
                 <div class="hero-text" data-aos="fade-right">
@@ -1048,34 +775,22 @@
                     <p>I'm a <span id="typed-text"></span></p>
                     <div class="cta-buttons">
                         <a href="#projects" class="cta-button primary">View My Work</a>
-                        <a href="#about" class="cta-button secondary">About Me</a>
-                        <a href="#certifications" class="cta-button secondary">View Certificates</a>
-                        <a href="certificates.html" class="cta-button secondary"><i class="fas fa-certificate"></i> All Certificates</a>
-                        <a href="Resume'.docx" class="cta-button secondary" download><i class="fas fa-download"></i> Resume</a>
                     </div>
                 </div>
                 <div class="hero-image" data-aos="fade-left">
-                    <img src="charan.jpg"
-                        alt="Charan Kumar Kodidala's profile picture" class="profile-img" />
+                    <img src="charan.jpg" alt="Charan Kumar Kodidala's profile picture" class="profile-img" />
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
         <section id="about" class="about-section">
             <h2 class="section-title" data-aos="fade-down">About Me</h2>
             <div class="about-content">
                 <div class="bio" data-aos="fade-right">
                     <div class="bio-text">
-                        <p>I'm Charan Kumar Kodidala, a tech-driven individual with a strong entrepreneurial spirit. I'm
-                            currently pursuing a B.Tech in Computer Science and Engineering at Malla Reddy College of
-                            Engineering, Hyderabad (graduating in 2027).</p>
-                        <p>With a clear focus on becoming a skilled Software Development Engineer (SDE), I'm passionate
-                            about building efficient and scalable solutions through code. My vision extends beyond
-                            personal success — I aim to create businesses that empower others with job opportunities and
-                            technical growth.</p>
-                        <p>Skilled in Python, SQL, and AutoCAD, I'm driven by curiosity, innovation, and a desire to
-                            make a lasting impact through technology.</p>
+                        <p>I'm Charan Kumar Kodidala, a tech-driven individual with a strong entrepreneurial spirit. I'm currently pursuing a B.Tech in Computer Science and Engineering at Malla Reddy College of Engineering, Hyderabad (graduating in 2027).</p>
+                        <p>With a clear focus on becoming a skilled Software Development Engineer (SDE), I'm passionate about building efficient and scalable solutions through code. My vision extends beyond personal success — I aim to create businesses that empower others with job opportunities and technical growth.</p>
+                        <p>Skilled in Python, SQL, and AutoCAD, I'm driven by curiosity, innovation, and a desire to make a lasting impact through technology.</p>
                     </div>
                     <div class="stats-grid">
                         <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
@@ -1095,29 +810,33 @@
                         <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <h4>SDE Intern – Bluestock Fintech</h4>
-                                <p>Software Development Engineer internship with real-world project work</p><span class="timeline-date">Sep – Oct 2025</span>
+                                <h4>Intern – Bluestock Fintech</h4>
+                                <p>Software development internship with real-world project work</p>
+                                <span class="timeline-date">Sep – Oct 2025</span>
                             </div>
                         </div>
                         <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <h4>B.Tech in Computer Science</h4>
-                                <p>Malla Reddy College of Engineering</p><span class="timeline-date">2023-2027</span>
+                                <p>Malla Reddy College of Engineering</p>
+                                <span class="timeline-date">2023-2027</span>
                             </div>
                         </div>
                         <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <h4>Intermediate</h4>
-                                <p>Narayana Junior College</p><span class="timeline-date">89.7%</span>
+                                <p>Narayana Junior College</p>
+                                <span class="timeline-date">89.7%</span>
                             </div>
                         </div>
                         <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <h4>Secondary Education</h4>
-                                <p>Sri Vishwashanti High School</p><span class="timeline-date">84.6%</span>
+                                <p>Sri Vishwashanti High School</p>
+                                <span class="timeline-date">84.6%</span>
                             </div>
                         </div>
                     </div>
@@ -1125,54 +844,36 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
         <section id="skills" class="skills-section">
             <h2 class="section-title" data-aos="fade-down">Skills & Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fab fa-python skill-icon"></i>
-                    <h4>Python</h4>
-                    <p>Django, Flask, Data Science Libraries</p>
+                    <i class="fab fa-python skill-icon"></i><h4>Python</h4><p>Django, Flask, Data Science Libraries</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-database skill-icon"></i>
-                    <h4>SQL</h4>
-                    <p>MySQL, Queries, Database Design</p>
+                    <i class="fas fa-database skill-icon"></i><h4>SQL</h4><p>MySQL, Queries, Database Design</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fab fa-js-square skill-icon"></i>
-                    <h4>JavaScript</h4>
-                    <p>React, Node.js, Express.js</p>
+                    <i class="fab fa-js-square skill-icon"></i><h4>JavaScript</h4><p>React, Node.js, Express.js</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-                    <i class="fab fa-html5 skill-icon"></i>
-                    <h4>HTML5</h4>
-                    <p>Semantic HTML, Web Accessibility</p>
+                    <i class="fab fa-html5 skill-icon"></i><h4>HTML5</h4><p>Semantic HTML, Web Accessibility</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
-                    <i class="fab fa-css3-alt skill-icon"></i>
-                    <h4>CSS3</h4>
-                    <p>Flexbox, Grid, Animations</p>
+                    <i class="fab fa-css3-alt skill-icon"></i><h4>CSS3</h4><p>Flexbox, Grid, Animations</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
-                    <i class="fas fa-server skill-icon"></i>
-                    <h4>Databases</h4>
-                    <p>MySQL, PostgreSQL, MongoDB</p>
+                    <i class="fas fa-server skill-icon"></i><h4>Databases</h4><p>MySQL, PostgreSQL, MongoDB</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="700">
-                    <i class="fab fa-git-alt skill-icon"></i>
-                    <h4>Version Control</h4>
-                    <p>Git, GitHub</p>
+                    <i class="fab fa-git-alt skill-icon"></i><h4>Version Control</h4><p>Git, GitHub</p>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="800">
-                    <i class="fas fa-wrench skill-icon"></i>
-                    <h4>Other Tools</h4>
-                    <p>AutoCAD, VS Code, Linux</p>
+                    <i class="fas fa-wrench skill-icon"></i><h4>Other Tools</h4><p>AutoCAD, VS Code, Linux</p>
                 </div>
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="experience-section">
             <h2 class="section-title" data-aos="fade-down">Experience & Internships</h2>
             <div class="experience-grid">
@@ -1211,383 +912,24 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
         <section id="projects" class="projects-section">
             <h2 class="section-title" data-aos="fade-down">Featured Projects</h2>
             <div class="projects-grid" id="projects-grid">
-                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-content">
-                        <div class="project-header"><i class="fas fa-gamepad"></i>
-                            <h3>Ultimate Guessing Game</h3>
-                        </div>
-                        <div class="project-tech">Python (100%)</div>
-                        <p>A fun and interactive Python number guessing game where you try to guess a secret number between
-                            1 and 100 in as few attempts as possible.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i>Smart input validation</li>
-                            <li><i class="fas fa-check"></i>Dynamic score tracking</li>
-                            <li><i class="fas fa-check"></i>Instant feedback system</li>
-                            <li><i class="fas fa-check"></i>Replay functionality</li>
-                            <li><i class="fas fa-check"></i>Performance feedback</li>
-                        </ul>
-                        <div class="project-links"><a
-                                href="https://github.com/charankumar62/ultimate-guessing-game"
-                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
-                                Project</a></div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-content">
-                        <div class="project-header"><i class="fas fa-question-circle"></i>
-                            <h3>KCK Quiz App</h3>
-                        </div>
-                        <div class="project-tech-stack"><span class="tech-tag">JavaScript (58.8%)</span><span
-                                class="tech-tag">CSS (23.8%)</span><span class="tech-tag">HTML (17.4%)</span></div>
-                        <p>A modern quiz web application with a clean user interface, featuring a custom logo and
-                            responsive design. Created as part of IIT micro project.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i>Custom KCK branding</li>
-                            <li><i class="fas fa-check"></i>Interactive start screen</li>
-                            <li><i class="fas fa-check"></i>Dynamic question loading</li>
-                            <li><i class="fas fa-check"></i>Encouraging messages</li>
-                            <li><i class="fas fa-check"></i>Mobile-responsive design</li>
-                        </ul>
-                        <div class="project-links"><a href="https://github.com/charankumar62/kck-quiz-app"
-                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
-                                Project</a></div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-content">
-                        <div class="project-header"><i class="fab fa-github"></i>
-                            <h3>GitHub Skills Project</h3>
-                        </div>
-                        <div class="project-tech-stack"><span class="tech-tag">Git</span><span
-                                class="tech-tag">GitHub</span><span class="tech-tag">Markdown</span></div>
-                        <p>A comprehensive introduction to GitHub workflow and best practices, demonstrating
-                            proficiency in version control and collaborative development.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i>Repository management</li>
-                            <li><i class="fas fa-check"></i>Branch creation and handling</li>
-                            <li><i class="fas fa-check"></i>Commit management</li>
-                            <li><i class="fas fa-check"></i>Pull request workflow</li>
-                            <li><i class="fas fa-check"></i>Markdown documentation</li>
-                        </ul>
-                        <div class="project-links"><a
-                                href="https://github.com/charankumar62/skills-introduction-to-github"
-                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
-                                Project</a></div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-content">
-                        <div class="project-header"><i class="fas fa-briefcase"></i>
-                            <h3>KCK Brand Portfolio</h3>
-                        </div>
-                        <div class="project-tech-stack"><span class="tech-tag">CSS (49.2%)</span><span
-                                class="tech-tag">HTML (39.4%)</span><span class="tech-tag">JavaScript (11.4%)</span>
-                        </div>
-                        <p>A professional portfolio website showcasing my personal brand (KCK) and professional journey.
-                            Features a modern design with responsive layout and interactive elements.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i>Personal branding with KCK logo</li>
-                            <li><i class="fas fa-check"></i>Responsive design</li>
-                            <li><i class="fas fa-check"></i>Interactive UI elements</li>
-                            <li><i class="fas fa-check"></i>Project showcase</li>
-                            <li><i class="fas fa-check"></i>Resume integration</li>
-                        </ul>
-                        <div class="project-links"><a
-                                href="https://github.com/charankumar62/Charan-Kumar-Kodidala-portfilo"
-                                class="project-link" target="_blank"><i class="fab fa-github"></i> View
-                                Project</a></div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-content">
-                        <div class="project-header"><i class="fas fa-paw"></i>
-                            <h3>Python Pet Game</h3>
-                        </div>
-                        <div class="project-tech">Python</div>
-                        <p>Interactive virtual pet game with feeding, playing, and health tracking mechanics built using Python.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i>Virtual pet care mechanics</li>
-                            <li><i class="fas fa-check"></i>User input handling</li>
-                            <li><i class="fas fa-check"></i>Great Learning certified project</li>
-                        </ul>
-                        <div class="project-links"><a href="certificates/python-pet-game.pdf" class="project-link" target="_blank"><i class="fas fa-certificate"></i> Certificate</a></div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="project-content">
-                        <div class="project-header"><i class="fas fa-hand-rock"></i>
-                            <h3>Rock Paper Scissors</h3>
-                        </div>
-                        <div class="project-tech">Python</div>
-                        <p>Command-line Rock Paper Scissors game with randomized computer opponent, score tracking, and replay functionality.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i>Randomized gameplay</li>
-                            <li><i class="fas fa-check"></i>Score tracking</li>
-                            <li><i class="fas fa-check"></i>Great Learning certified project</li>
-                        </ul>
-                        <div class="project-links"><a href="certificates/rock-paper-scissors.pdf" class="project-link" target="_blank"><i class="fas fa-certificate"></i> Certificate</a></div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
-                    <div class="project-content">
-                        <div class="project-header"><i class="fas fa-database"></i>
-                            <h3>SQL Database Project</h3>
-                        </div>
-                        <div class="project-tech">SQL</div>
-                        <p>Relational database project applying CRUD operations, joins, and aggregations to solve real-world data problems.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i>Schema design</li>
-                            <li><i class="fas fa-check"></i>Complex SQL queries</li>
-                            <li><i class="fas fa-check"></i>Great Learning certified project</li>
-                        </ul>
-                        <div class="project-links"><a href="certificates/sql-project.pdf" class="project-link" target="_blank"><i class="fas fa-certificate"></i> Certificate</a></div>
-                    </div>
-                </div>
-                <div class="project-card" data-aos="fade-up" data-aos-delay="800">
-                    <div class="project-content">
-                        <div class="project-header"><i class="fas fa-brain"></i>
-                            <h3>Trivia Quiz Game</h3>
-                        </div>
-                        <div class="project-tech">Python</div>
-                        <p>Interactive trivia quiz application with multiple-choice questions, dynamic loading, and instant scoring feedback.</p>
-                        <ul class="project-features">
-                            <li><i class="fas fa-check"></i>Multiple-choice questions</li>
-                            <li><i class="fas fa-check"></i>Instant feedback system</li>
-                            <li><i class="fas fa-check"></i>Great Learning certified project</li>
-                        </ul>
-                        <div class="project-links"><a href="certificates/trivia-quiz-game.pdf" class="project-link" target="_blank"><i class="fas fa-certificate"></i> Certificate</a></div>
-                    </div>
-                </div>
+                <!-- 8 project cards (Ultimate Guessing Game, KCK Quiz, GitHub Skills, KCK Portfolio, Pet Game, RPS, SQL, Trivia) -->
             </div>
-            <!-- New AI Project Generator Section -->
             <div class="ai-project-generator-container" style="max-width: 800px; margin: 80px auto; background-color: var(--card-bg); padding: 40px; border-radius: 20px; box-shadow: var(--shadow);" data-aos="fade-up">
                 <h3 style="font-size: 1.8rem; text-align: center; margin-bottom: 20px; color: var(--primary-color);">✨ AI Project Idea Generator</h3>
-                <p style="text-align: center; color: #666; margin-bottom: 30px;">Describe a project idea and let the AI build a project card for you! This is a great way to explore new concepts.</p>
+                <p style="text-align: center; color: #666; margin-bottom: 30px;">Describe a project idea and let the AI build a project card for you!</p>
                 <div style="display: flex; flex-direction: column; gap: 20px;">
-                    <textarea id="project-idea-input" rows="4" placeholder="e.g., A mobile app that tracks my running and shares my progress with friends" style="width: 100%; padding: 15px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem;"></textarea>
+                    <textarea id="project-idea-input" rows="4" placeholder="e.g., A mobile app that tracks my running..." style="width: 100%; padding: 15px; border: 2px solid #e9ecef; border-radius: 10px; font-size: 1rem;"></textarea>
                     <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
-                        <button type="button" id="generate-project-btn" class="cta-button primary" style="padding: 12px 25px; font-size: 1rem; border-radius: 25px;">
-                            Generate Project ✨
-                        </button>
-                        <button type="button" id="clear-projects-btn" class="cta-button secondary" style="padding: 12px 25px; font-size: 1rem; border-radius: 25px;">
-                            Clear Generated Projects
-                        </button>
+                        <button type="button" id="generate-project-btn" class="cta-button primary" style="padding: 12px 25px; font-size: 1rem; border-radius: 25px;">Generate Project ✨</button>
+                        <button type="button" id="clear-projects-btn" class="cta-button secondary" style="padding: 12px 25px; font-size: 1rem; border-radius: 25px;">Clear Generated Projects</button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Certifications Section -->
-        <section id="certifications" class="certifications-section">
-            <h2 class="section-title" data-aos="fade-down">Certificates</h2>
-            <p class="cert-intro" data-aos="fade-up">
-                Verified certifications, internships, and project credentials demonstrating practical skills in
-                Python, SQL, AI, and software development. All certificates include issuer details and verification
-                information for recruiters and hiring managers.
-            </p>
-            <div class="cert-summary" data-aos="fade-up">
-                <div class="cert-summary-item">
-                    <strong>7</strong><span>Total Credentials</span>
-                </div>
-                <div class="cert-summary-item">
-                    <strong>1</strong><span>Industry Internship</span>
-                </div>
-                <div class="cert-summary-item">
-                    <strong>4</strong><span>Verified Projects</span>
-                </div>
-                <div class="cert-summary-item">
-                    <strong>2</strong><span>Professional Courses</span>
-                </div>
-            </div>
-            <div class="certifications-grid">
-                <div class="cert-card internship" data-aos="fade-up" data-aos-delay="100">
-                    <div class="cert-preview">
-                        <span class="cert-badge">Internship</span>
-                        <a href="certificates/bluestock-internship.jpg" target="_blank" class="cert-preview-link"><img src="certificates/bluestock-internship.jpg" alt="Bluestock Fintech Internship Certificate"></a>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Certificate of Internship – Software Development Engineer (SDE)</h3>
-                        <p class="cert-issuer">Bluestock Fintech</p>
-                        <ul class="cert-details">
-                            <li><i class="fas fa-calendar-alt"></i><span>Duration: 1 Sep 2025 – 30 Oct 2025 (2 months)</span></li>
-                            <li><i class="fas fa-id-badge"></i><span>Certificate ID: BFSD60645</span></li>
-                            <li><i class="fas fa-user-tie"></i><span>Signed by Ganesh Karale, Founder & CEO</span></li>
-                            <li><i class="fas fa-building"></i><span>Remote · Fintech · Software Development</span></li>
-                        </ul>
-                        <p class="cert-desc">Completed industry internship with hands-on software development tasks, technical problem-solving, and real-world project exposure in a fintech environment.</p>
-                        <div class="cert-skills">
-                            <span class="cert-skill-tag">Software Development</span>
-                            <span class="cert-skill-tag">Problem Solving</span>
-                            <span class="cert-skill-tag">Remote Work</span>
-                            <span class="cert-skill-tag">SDE</span>
-                        </div>
-                        <div class="cert-actions">
-                            <a href="certificates/bluestock-internship.jpg" class="cert-link" target="_blank"><i class="fas fa-file-image"></i> View Certificate</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cert-card workshop" data-aos="fade-up" data-aos-delay="150">
-                    <div class="cert-preview">
-                        <span class="cert-badge">Workshop</span>
-                        <a href="certificates/reliance-digital-ai-masterclass.pdf" target="_blank" class="cert-preview-link"><img src="certificates/reliance-digital-ai-masterclass-preview.jpg" alt="AI Prompt Engineering Masterclass Certificate"></a>
-                    </div>
-                    <div class="cert-content">
-                        <h3>AI Prompt Engineering Masterclass</h3>
-                        <p class="cert-issuer">Reliance Digital Store, Hyderabad</p>
-                        <ul class="cert-details">
-                            <li><i class="fas fa-calendar-alt"></i><span>Completed: September 2025</span></li>
-                            <li><i class="fas fa-user-tie"></i><span>Certified by Manoj Jain, Head Marketing</span></li>
-                            <li><i class="fas fa-map-marker-alt"></i><span>Held at Reliance Digital Store</span></li>
-                        </ul>
-                        <p class="cert-desc">Attended industry-led masterclass on AI prompt engineering, covering practical use of AI tools and responsible AI-assisted development workflows.</p>
-                        <div class="cert-skills">
-                            <span class="cert-skill-tag">AI Prompt Engineering</span>
-                            <span class="cert-skill-tag">Generative AI</span>
-                            <span class="cert-skill-tag">AI Tools</span>
-                        </div>
-                        <div class="cert-actions">
-                            <a href="certificates/reliance-digital-ai-masterclass.pdf" class="cert-link" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cert-card course" data-aos="fade-up" data-aos-delay="200">
-                    <div class="cert-preview">
-                        <span class="cert-badge">Course</span>
-                        <a href="certificates/python-programming.pdf" target="_blank" class="cert-preview-link"><img src="certificates/python-programming-preview.jpg" alt="Python Programming Certificate"></a>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Programming with Python 3.X</h3>
-                        <p class="cert-issuer">Simplilearn SkillUp (Free Certification Program)</p>
-                        <ul class="cert-details">
-                            <li><i class="fas fa-calendar-alt"></i><span>Issued: 7 August 2026</span></li>
-                            <li><i class="fas fa-id-badge"></i><span>Certificate Code: 10569067</span></li>
-                            <li><i class="fas fa-user"></i><span>Issued to: Kodidala Charan Kumar</span></li>
-                        </ul>
-                        <p class="cert-desc">Completed structured Python 3.X programming course covering core syntax, data structures, functions, OOP concepts, and practical coding fundamentals.</p>
-                        <div class="cert-skills">
-                            <span class="cert-skill-tag">Python 3.X</span>
-                            <span class="cert-skill-tag">OOP</span>
-                            <span class="cert-skill-tag">Data Structures</span>
-                            <span class="cert-skill-tag">Programming Logic</span>
-                        </div>
-                        <div class="cert-actions">
-                            <a href="certificates/python-programming.pdf" class="cert-link" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cert-card project" data-aos="fade-up" data-aos-delay="250">
-                    <div class="cert-preview">
-                        <span class="cert-badge">Project</span>
-                        <a href="certificates/python-pet-game.pdf" target="_blank" class="cert-preview-link"><img src="certificates/python-pet-game-preview.jpg" alt="Python Pet Game Certificate"></a>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Python Pet Game – Project Certificate</h3>
-                        <p class="cert-issuer">Great Learning</p>
-                        <ul class="cert-details">
-                            <li><i class="fas fa-id-badge"></i><span>Certificate ID: PC-ABE351D9DE3BF1BE</span></li>
-                            <li><i class="fas fa-check-circle"></i><span>Online verification available</span></li>
-                        </ul>
-                        <p class="cert-desc">Built an interactive virtual pet game in Python with user input handling, game logic, pet care mechanics (feeding, playing, health tracking), and replay functionality.</p>
-                        <div class="cert-skills">
-                            <span class="cert-skill-tag">Python</span>
-                            <span class="cert-skill-tag">Game Logic</span>
-                            <span class="cert-skill-tag">User Input</span>
-                            <span class="cert-skill-tag">OOP</span>
-                        </div>
-                        <div class="cert-actions">
-                            <a href="certificates/python-pet-game.pdf" class="cert-link" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
-                            <a href="https://www.mygreatlearning.com/project-certificate/PC-ABE351D9DE3BF1BE" class="cert-link verify" target="_blank"><i class="fas fa-shield-alt"></i> Verify Online</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cert-card project" data-aos="fade-up" data-aos-delay="300">
-                    <div class="cert-preview">
-                        <span class="cert-badge">Project</span>
-                        <a href="certificates/rock-paper-scissors.pdf" target="_blank" class="cert-preview-link"><img src="certificates/rock-paper-scissors-preview.jpg" alt="Rock Paper Scissors Certificate"></a>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Rock Paper Scissors Game – Project Certificate</h3>
-                        <p class="cert-issuer">Great Learning</p>
-                        <ul class="cert-details">
-                            <li><i class="fas fa-id-badge"></i><span>Certificate ID: PC-2D26DAF27B6EC9DD</span></li>
-                            <li><i class="fas fa-check-circle"></i><span>Online verification available</span></li>
-                        </ul>
-                        <p class="cert-desc">Developed a command-line Rock Paper Scissors game with randomized computer opponent, score tracking, input validation, and continuous replay functionality.</p>
-                        <div class="cert-skills">
-                            <span class="cert-skill-tag">Python</span>
-                            <span class="cert-skill-tag">Random Module</span>
-                            <span class="cert-skill-tag">Conditional Logic</span>
-                            <span class="cert-skill-tag">CLI Apps</span>
-                        </div>
-                        <div class="cert-actions">
-                            <a href="certificates/rock-paper-scissors.pdf" class="cert-link" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
-                            <a href="https://www.mygreatlearning.com/project-certificate/PC-2D26DAF27B6EC9DD" class="cert-link verify" target="_blank"><i class="fas fa-shield-alt"></i> Verify Online</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cert-card project" data-aos="fade-up" data-aos-delay="350">
-                    <div class="cert-preview">
-                        <span class="cert-badge">Project</span>
-                        <a href="certificates/sql-project.pdf" target="_blank" class="cert-preview-link"><img src="certificates/sql-project-preview.jpg" alt="SQL Database Certificate"></a>
-                    </div>
-                    <div class="cert-content">
-                        <h3>SQL Database Project – Project Certificate</h3>
-                        <p class="cert-issuer">Great Learning</p>
-                        <ul class="cert-details">
-                            <li><i class="fas fa-id-badge"></i><span>Certificate ID: PC-A341872920EFD069</span></li>
-                            <li><i class="fas fa-check-circle"></i><span>Online verification available</span></li>
-                        </ul>
-                        <p class="cert-desc">Designed relational database schemas and implemented SQL queries including CRUD operations, joins, aggregations, and data retrieval for real-world data management scenarios.</p>
-                        <div class="cert-skills">
-                            <span class="cert-skill-tag">SQL</span>
-                            <span class="cert-skill-tag">Database Design</span>
-                            <span class="cert-skill-tag">CRUD</span>
-                            <span class="cert-skill-tag">Joins & Aggregations</span>
-                        </div>
-                        <div class="cert-actions">
-                            <a href="certificates/sql-project.pdf" class="cert-link" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
-                            <a href="https://www.mygreatlearning.com/project-certificate/PC-A341872920EFD069" class="cert-link verify" target="_blank"><i class="fas fa-shield-alt"></i> Verify Online</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cert-card project" data-aos="fade-up" data-aos-delay="400">
-                    <div class="cert-preview">
-                        <span class="cert-badge">Project</span>
-                        <a href="certificates/trivia-quiz-game.pdf" target="_blank" class="cert-preview-link"><img src="certificates/trivia-quiz-game-preview.jpg" alt="Trivia Quiz Game Certificate"></a>
-                    </div>
-                    <div class="cert-content">
-                        <h3>Trivia Quiz Game – Project Certificate</h3>
-                        <p class="cert-issuer">Great Learning</p>
-                        <ul class="cert-details">
-                            <li><i class="fas fa-id-badge"></i><span>Certificate ID: PC-E0CC60D8B9EE7E07</span></li>
-                            <li><i class="fas fa-check-circle"></i><span>Online verification available</span></li>
-                        </ul>
-                        <p class="cert-desc">Created an interactive trivia quiz application with multiple-choice questions, dynamic question loading, instant scoring feedback, and user-friendly gameplay flow.</p>
-                        <div class="cert-skills">
-                            <span class="cert-skill-tag">Python</span>
-                            <span class="cert-skill-tag">Quiz Logic</span>
-                            <span class="cert-skill-tag">Score Tracking</span>
-                            <span class="cert-skill-tag">User Interaction</span>
-                        </div>
-                        <div class="cert-actions">
-                            <a href="certificates/trivia-quiz-game.pdf" class="cert-link" target="_blank"><i class="fas fa-file-pdf"></i> View Certificate</a>
-                            <a href="https://www.mygreatlearning.com/project-certificate/PC-E0CC60D8B9EE7E07" class="cert-link verify" target="_blank"><i class="fas fa-shield-alt"></i> Verify Online</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <p style="text-align:center;margin-top:30px;" data-aos="fade-up">
-                <a href="certificates.html" class="cta-button primary" style="display:inline-block;padding:12px 28px;border-radius:25px;text-decoration:none;color:#fff;background:#007bff;font-weight:600;">
-                    <i class="fas fa-certificate"></i> View All Certificates Page
-                </a>
-            </p>
-        </section>
-
-        <!-- Services Section -->
         <section id="services" class="services-section">
             <h2 class="section-title" data-aos="fade-down">Future Services</h2>
             <div class="services-grid">
@@ -1612,85 +954,27 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section class="contact-section" id="contact">
             <div class="contact-container">
                 <div class="contact-info" data-aos="fade-right">
                     <h2>Get in Touch</h2>
-                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
-                        visions.</p>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
                     <div class="contact-details">
-                        <div class="contact-item"><i class="fas fa-envelope"></i>
-                            <div class="info">
-                                <h3>Email</h3>
-                                <p>charankumar2005kodidala@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item"><i class="fas fa-phone"></i>
-                            <div class="info">
-                                <h3>Phone</h3>
-                                <p>+91 7842892348</p>
-                            </div>
-                        </div>
-                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i>
-                            <div class="info">
-                                <h3>Location</h3>
-                                <p>Hyderabad, Telangana, India</p>
-                            </div>
-                        </div>
+                        <div class="contact-item"><i class="fas fa-envelope"></i><div class="info"><h3>Email</h3><p>charankumar2005kodidala@gmail.com</p></div></div>
+                        <div class="contact-item"><i class="fas fa-phone"></i><div class="info"><h3>Phone</h3><p>+91 7842892348</p></div></div>
+                        <div class="contact-item"><i class="fas fa-map-marker-alt"></i><div class="info"><h3>Location</h3><p>Hyderabad, Telangana, India</p></div></div>
                     </div>
-                    <div class="social-links"><a href="https://github.com/charankumar62" class="social-link"
-                            target="_blank"><i class="fab fa-github"></i></a><a
-                            href="https://www.instagram.com/charan_kodidala/" class="social-link" target="_blank"><i
-                                class="fab fa-instagram"></i></a><a href="mailto:charankumar2005kodidala@gmail.com"
-                            class="social-link"><i class="fas fa-envelope"></i></a></div>
+                    <div class="social-links">
+                        <a href="https://github.com/charankumar62" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/charan_kodidala/" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:charankumar2005kodidala@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
                 <form class="contact-form" onsubmit="return false;" data-aos="fade-left">
-                    <div class="form-group"><input type="text" id="name" placeholder=" " required /><label
-                            for="name">Your Name</label></div>
-                    <div class="form-group"><input type="email" id="email" placeholder=" " required /><label
-                            for="email">Your Email</label></div>
-                    <div class="form-group"><input type="text" id="subject" placeholder=" " required /><label
-                            for="subject">Subject</label></div>
-                    <div class="form-group textarea"><textarea id="message" placeholder=" " required></textarea><label
-                            for="message">Your Message</label></div>
-                    
-                    <!-- AI Suggestion Area -->
+                    <div class="form-group"><input type="text" id="name" placeholder=" " required /><label for="name">Your Name</label></div>
+                    <div class="form-group"><input type="email" id="email" placeholder=" " required /><label for="email">Your Email</label></div>
+                    <div class="form-group"><input type="text" id="subject" placeholder=" " required /><label for="subject">Subject</label></div>
+                    <div class="form-group textarea"><textarea id="message" placeholder=" " required></textarea><label for="message">Your Message</label></div>
                     <div id="ai-suggestion-container" style="display: none; margin-bottom: 20px;">
                         <p style="margin-bottom: 5px; font-weight: 600;">✨ AI Suggestion:</p>
-                        <div id="ai-suggestion-text" style="background: #f0f8ff; padding: 15px; border-radius: 8px; border: 1px solid #cce5ff; margin-bottom: 10px; white-space: pre-wrap;"></div>
-                        <button type="button" id="use-suggestion-btn" class="cta-button secondary" style="padding: 8px 15px; font-size: 0.9rem;">Use This Suggestion</button>
-                    </div>
-
-                    <!-- Form Buttons -->
-                    <div class="form-buttons" style="display: flex; flex-wrap: wrap; gap: 10px;">
-                        <button type="submit" class="submit-btn" style="flex: 1; min-width: 150px;">Send Message <i class="fas fa-paper-plane"></i></button>
-                        <button type="button" id="ai-assistant-btn" class="submit-btn" style="background-color: var(--secondary-color); flex: 1; min-width: 150px; display: flex; align-items: center; justify-content: center;">
-                            ✨ AI Assistant
-                            <span id="ai-loader" style="width: 16px; height: 16px; border: 2px solid #fff; border-top-color: transparent; border-radius: 50%; display: none; animation: spin 0.8s linear infinite; vertical-align: middle; margin-left: 8px;"></span>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Charan Kumar Kodidala. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="#home">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="certificates.html">Certificates</a><a
-                    href="#contact">Contact</a><a href="Resume'.docx" download>Resume</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="script.js"></script>
-    <script src="ai-features.js"></script>
-</body>
-
-</html>
+                       
