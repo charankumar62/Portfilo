@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Charan Kumar Kodidala</h1>
-<h3 align="center">Software Development Engineer in the making | Java • Python • JavaScript</h3>
+<h3 align="center">Software Development Engineer in the making | Python • JavaScript</h3>
 
 <p align="center">
   <a href="https://github.com/charankumar62" target="_blank"><img src="https://img.shields.io/badge/GitHub-charankumar62-181717?style=flat&logo=github" /></a>
