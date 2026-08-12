@@ -533,6 +533,81 @@
             color: var(--primary-color);
         }
 
+        button.project-link {
+            cursor: pointer;
+            font-family: inherit;
+            font-size: inherit;
+        }
+
+        /* Certificate viewer modal */
+        .cert-modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.88);
+            z-index: 10001;
+            padding: 20px;
+            overflow: auto;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .cert-modal.active { display: flex; }
+
+        .cert-modal-box {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            margin: 20px auto 40px;
+        }
+
+        .cert-modal-close {
+            position: fixed;
+            top: 16px;
+            right: 20px;
+            background: #fff;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            cursor: pointer;
+            z-index: 10002;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .cert-modal img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            background: #fff;
+        }
+
+        .cert-modal-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .cert-modal-actions a {
+            color: #fff;
+            background: var(--primary-color);
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cert-modal-actions a.secondary {
+            background: transparent;
+            border: 2px solid #fff;
+        }
+
         /* Services Section */
         .services-grid {
             display: grid;
@@ -1196,7 +1271,7 @@
                             <li><i class="fas fa-check"></i>Certificate ID: BFSD60645</li>
                         </ul>
                         <div class="project-links">
-                            <a href="certificates/bluestock-internship.jpg" class="project-link" target="_blank"><i class="fas fa-certificate"></i> View Certificate</a>
+                            <button type="button" class="project-link view-cert-btn" data-view="certificates/bluestock-internship.jpg" data-title="Bluestock Fintech Internship"><i class="fas fa-certificate"></i> View Certificate</button>
                         </div>
                     </div>
                 </div>
@@ -1398,6 +1473,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Certificate viewer modal -->
+    <div class="cert-modal" id="cert-modal" role="dialog" aria-modal="true" aria-label="Certificate viewer">
+        <button type="button" class="cert-modal-close" id="cert-modal-close" aria-label="Close">&times;</button>
+        <div class="cert-modal-box">
+            <img id="cert-modal-img" src="" alt="Certificate">
+            <div class="cert-modal-actions" id="cert-modal-actions"></div>
+        </div>
+    </div>
 
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
