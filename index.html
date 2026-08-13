@@ -1444,16 +1444,304 @@
     </footer>
 
     <!-- Certificate Modal -->
-    <div class="cert-modal" id="cert-modal">
-        <button type="button" class="cert-modal-close" id="cert-modal-close" aria-label="Close">&times;</button>
-        <div class="cert-modal-box">
-            <img id="cert-modal-img" src="" alt="Certificate">
-            <div class="cert-modal-actions" id="cert-modal-actions"></div>
+   <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates - Charan Kumar Kodidala</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        .header {
+            text-align: center;
+            background: #fff;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .header h1 { margin-bottom: 8px; }
+        .header p { color: #666; margin-bottom: 14px; }
+
+        .header a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+
+        .header a:hover { text-decoration: underline; }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 28px;
+        }
+
+        .cert-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-top: 4px solid #007bff;
+        }
+
+        .cert-card.internship { border-top-color: #28a745; }
+        .cert-card.workshop { border-top-color: #fd7e14; }
+        .cert-card.project { border-top-color: #6f42c1; }
+
+        .cert-viewer {
+            width: 100%;
+            height: 280px;
+            background: #eef2f7;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+        }
+
+        .cert-viewer img,
+        .cert-viewer iframe,
+        .cert-viewer embed,
+        .cert-viewer a {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            object-fit: contain;
+            background: #fff;
+            text-decoration: none;
+        }
+
+        .cert-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #007bff;
+        }
+
+        .cert-body { padding: 20px; }
+
+        .cert-body h2 {
+            font-size: 1.05rem;
+            margin-bottom: 6px;
+        }
+
+        .issuer {
+            color: #007bff;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .details {
+            list-style: none;
+            font-size: 0.85rem;
+            color: #555;
+            margin-bottom: 12px;
+        }
+
+        .details li { margin-bottom: 5px; }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 2px solid #007bff;
+        }
+
+        .btn-primary {
+            background: #007bff;
+            color: #fff;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #007bff;
+        }
+
+        .btn:hover { opacity: 0.9; }
+
+        @media (max-width: 768px) {
+            .cert-grid { grid-template-columns: 1fr; }
+            .cert-viewer { height: 240px; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Certificates</h1>
+            <p>All certificates are publicly viewable below. Click "Open Full Certificate" to view or download the original file.</p>
+            <div>
+                <a href="Portfilo.html"><i class="fas fa-home"></i> Portfolio</a>
+                <a href="projects.html"><i class="fas fa-code"></i> Projects</a>
+                <a href="about.html"><i class="fas fa-user"></i> About</a>
+            </div>
+        </div>
+
+        <div class="cert-grid">
+
+            <div class="cert-card internship">
+                <div class="cert-viewer">
+                    <span class="cert-badge">Internship</span>
+                    <a href="certificates/bluestock-internship.jpg" target="_blank"><img src="certificates/bluestock-internship.jpg" alt="Bluestock Fintech Internship Certificate"></a>
+                </div>
+                <div class="cert-body">
+                    <h2>Certificate of Internship – SDE</h2>
+                    <p class="issuer">Bluestock Fintech</p>
+                    <ul class="details">
+                        <li>Duration: 1 Sep 2025 – 30 Oct 2025</li>
+                        <li>Certificate ID: BFSD60645</li>
+                        <li>Signed by Ganesh Karale, Founder & CEO</li>
+                    </ul>
+                    <div class="actions">
+                        <a href="certificates/bluestock-internship.jpg" class="btn btn-primary" target="_blank"><i class="fas fa-expand"></i> Open Full Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card workshop">
+                <div class="cert-viewer">
+                    <span class="cert-badge">Workshop</span>
+                    <a href="certificates/reliance-digital-ai-masterclass.pdf" target="_blank"><img src="certificates/reliance-digital-ai-masterclass-preview.jpg" alt="AI Masterclass Certificate"></a>
+                </div>
+                <div class="cert-body">
+                    <h2>AI Prompt Engineering Masterclass</h2>
+                    <p class="issuer">Reliance Digital Store, Hyderabad</p>
+                    <ul class="details">
+                        <li>Completed: September 2025</li>
+                        <li>Certified by Manoj Jain, Head Marketing</li>
+                    </ul>
+                    <div class="actions">
+                        <a href="certificates/reliance-digital-ai-masterclass.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-expand"></i> Open Full Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card course">
+                <div class="cert-viewer">
+                    <span class="cert-badge">Course</span>
+                    <a href="certificates/python-programming.pdf" target="_blank"><img src="certificates/python-programming-preview.jpg" alt="Python Programming Certificate"></a>
+                </div>
+                <div class="cert-body">
+                    <h2>Programming with Python 3.X</h2>
+                    <p class="issuer">Simplilearn SkillUp</p>
+                    <ul class="details">
+                        <li>Issued: 7 August 2026</li>
+                        <li>Certificate Code: 10569067</li>
+                    </ul>
+                    <div class="actions">
+                        <a href="certificates/python-programming.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-expand"></i> Open Full Certificate</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card project">
+                <div class="cert-viewer">
+                    <span class="cert-badge">Project</span>
+                    <a href="certificates/python-pet-game.pdf" target="_blank"><img src="certificates/python-pet-game-preview.jpg" alt="Python Pet Game Certificate"></a>
+                </div>
+                <div class="cert-body">
+                    <h2>Python Pet Game – Project Certificate</h2>
+                    <p class="issuer">Great Learning</p>
+                    <ul class="details">
+                        <li>Certificate ID: PC-ABE351D9DE3BF1BE</li>
+                    </ul>
+                    <div class="actions">
+                        <a href="certificates/python-pet-game.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-expand"></i> Open Full Certificate</a>
+                        <a href="https://www.mygreatlearning.com/project-certificate/PC-ABE351D9DE3BF1BE" class="btn btn-outline" target="_blank"><i class="fas fa-shield-alt"></i> Verify Online</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card project">
+                <div class="cert-viewer">
+                    <span class="cert-badge">Project</span>
+                    <a href="certificates/rock-paper-scissors.pdf" target="_blank"><img src="certificates/rock-paper-scissors-preview.jpg" alt="Rock Paper Scissors Certificate"></a>
+                </div>
+                <div class="cert-body">
+                    <h2>Rock Paper Scissors – Project Certificate</h2>
+                    <p class="issuer">Great Learning</p>
+                    <ul class="details">
+                        <li>Certificate ID: PC-2D26DAF27B6EC9DD</li>
+                    </ul>
+                    <div class="actions">
+                        <a href="certificates/rock-paper-scissors.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-expand"></i> Open Full Certificate</a>
+                        <a href="https://www.mygreatlearning.com/project-certificate/PC-2D26DAF27B6EC9DD" class="btn btn-outline" target="_blank"><i class="fas fa-shield-alt"></i> Verify Online</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card project">
+                <div class="cert-viewer">
+                    <span class="cert-badge">Project</span>
+                    <a href="certificates/sql-project.pdf" target="_blank"><img src="certificates/sql-project-preview.jpg" alt="SQL Project Certificate"></a>
+                </div>
+                <div class="cert-body">
+                    <h2>SQL Database Project – Project Certificate</h2>
+                    <p class="issuer">Great Learning</p>
+                    <ul class="details">
+                        <li>Certificate ID: PC-A341872920EFD069</li>
+                    </ul>
+                    <div class="actions">
+                        <a href="certificates/sql-project.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-expand"></i> Open Full Certificate</a>
+                        <a href="https://www.mygreatlearning.com/project-certificate/PC-A341872920EFD069" class="btn btn-outline" target="_blank"><i class="fas fa-shield-alt"></i> Verify Online</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-card project">
+                <div class="cert-viewer">
+                    <span class="cert-badge">Project</span>
+                    <a href="certificates/trivia-quiz-game.pdf" target="_blank"><img src="certificates/trivia-quiz-game-preview.jpg" alt="Trivia Quiz Game Certificate"></a>
+                </div>
+                <div class="cert-body">
+                    <h2>Trivia Quiz Game – Project Certificate</h2>
+                    <p class="issuer">Great Learning</p>
+                    <ul class="details">
+                        <li>Certificate ID: PC-E0CC60D8B9EE7E07</li>
+                    </ul>
+                    <div class="actions">
+                        <a href="certificates/trivia-quiz-game.pdf" class="btn btn-primary" target="_blank"><i class="fas fa-expand"></i> Open Full Certificate</a>
+                        <a href="https://www.mygreatlearning.com/project-certificate/PC-E0CC60D8B9EE7E07" class="btn btn-outline" target="_blank"><i class="fas fa-shield-alt"></i> Verify Online</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
 </body>
 
 </html>
