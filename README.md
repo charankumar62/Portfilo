@@ -5,6 +5,10 @@
   <a href="https://github.com/charankumar62" target="_blank"><img src="https://img.shields.io/badge/GitHub-charankumar62-181717?style=flat&logo=github" /></a>
   <a href="https://www.instagram.com/charan_kodidala/" target="_blank"><img src="https://img.shields.io/badge/Instagram-charan__kodidala-E4405F?style=flat&logo=instagram&logoColor=white" /></a>
   <a href="mailto:charankumar2005kodidala@gmail.com"><img src="https://img.shields.io/badge/Email-charankumar2005kodidala%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" /></a>
+  <a href="https://charankumarkodidala.netlify.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfolio-Visit%20My%20Portfolio-D14836?style=flat&logo=google-chrome&logoColor=white" alt="Portfolio">
+</a>
+
 </p>
 
 ---
