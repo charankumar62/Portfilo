@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Charan Kumar Kodidala</h1>
-<h3 align="center">Software Development Engineer in the making | Python • JavaScript</h3>
+<h3 align="center">Software Development Engineer in the making | Python • SQL • JavaScript </h3>
 
 <p align="center">
   <a href="https://github.com/charankumar62" target="_blank"><img src="https://img.shields.io/badge/GitHub-charankumar62-181717?style=flat&logo=github" /></a>
@@ -63,7 +63,7 @@
 | [Ultimate Guessing Game](https://github.com/charankumar62/ultimate-guessing-game) | An interactive number/word guessing game | JavaScript |
 | [KCK Quiz App](https://github.com/charankumar62/kck-quiz-app) | A quiz application with dynamic scoring | JavaScript, CSS, HTML |
 | [GitHub Skills Project](https://github.com/charankumar62/skills-introduction-to-github) | Hands-on practice with Git & GitHub workflows | Git, GitHub, Markdown |
-| [KCK Brand Portfolio](https://github.com/charankumar62/Charan-Kumar-Kodidala-portfilo) | Personal portfolio website | CSS, HTML, JavaScript |
+| [KCK Brand Portfolio](https://github.com/charankumar62/Charan-Kumar-Kodidala-portfolio) | Personal portfolio website | CSS, HTML, JavaScript |
 
 ---
 
@@ -86,6 +86,7 @@
   <a href="https://github.com/charankumar62" target="_blank">GitHub</a> •
   <a href="https://www.instagram.com/charan_kodidala/" target="_blank">Instagram</a> •
   <a href="mailto:charankumar2005kodidala@gmail.com">Email</a>
+  <a href="https://charankumarkodidala.netlify.app/"target="_blank">Personal Portfolio</a> •
 </p>
 
 <p align="center"><i>⭐ Building things, one commit at a time.</i></p>
