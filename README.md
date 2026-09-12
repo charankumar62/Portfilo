@@ -1,47 +1,95 @@
-Charan Kumar Kodidala — enhanced portfolio
+<h1 align="center">Hi 👋, I'm Charan Kumar Kodidala</h1>
+<h3 align="center">Software Development Engineer in the making | Python • SQL • JavaScript </h3>
 
-A responsive static portfolio using HTML, CSS, and plain JavaScript.
+<p align="center">
+  <a href="https://github.com/charankumar62" target="_blank"><img src="https://img.shields.io/badge/GitHub-charankumar62-181717?style=flat&logo=github" /></a>
+  <a href="https://www.instagram.com/charan_kodidala/" target="_blank"><img src="https://img.shields.io/badge/Instagram-charan__kodidala-E4405F?style=flat&logo=instagram&logoColor=white" /></a>
+  <a href="mailto:charankumar2005kodidala@gmail.com"><img src="https://img.shields.io/badge/Email-charankumar2005kodidala%40gmail.com-D14836?style=flat&logo=gmail&logoColor=white" /></a>
+  <a href="https://charankumarkodidala.netlify.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Portfolio-Visit%20My%20Portfolio-D14836?style=flat&logo=google-chrome&logoColor=white" alt="Portfolio">
+</a>
 
-Open the portfolio
+</p>
 
-Open index.html in a modern browser. Keep all files and the certificates folder together. No package installation, API key, or build step is needed.
+---
 
-Portfilo.html forwards the old entry point to index.html.
+### 🚀 About Me
 
-Included
+- 🎓 Pursuing **B.Tech in Computer Science and Engineering** at Malla Reddy College of Engineering, Hyderabad (2023 – 2027)
+- 💻 Focused on becoming a skilled **Software Development Engineer (SDE)**
+- 🌱 Currently building efficient, scalable solutions through code
+- 🎯 Long-term vision: build businesses that create job opportunities and technical growth for others
+- ⚡ Driven by curiosity, innovation, and a desire to make a lasting impact through technology
+- 📫 Reach me at **charankumar2005kodidala@gmail.com**
 
-Personal photo, six project entries, skills, education, and three internships.
+---
 
-A short KCK intro animation that dismisses automatically.
+### 🛠️ Skills & Tech Stack
 
-Animated role text, scroll reveals, reading progress, and subtle pointer tilt.
+**Languages & Frameworks**
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" />
+</p>
 
-A Motion switch that remembers your preference and respects reduced-motion device settings.
+**Frameworks & Libraries**
+<p>
+  <img src="https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white" />
+  <img src="https://img.shields.io/badge/Hibernate-59666C?style=flat&logo=hibernate&logoColor=white" />
+  <img src="https://img.shields.io/badge/Django-092E20?style=flat&logo=django&logoColor=white" />
+  <img src="https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white" />
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat&logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white" />
+</p>
 
-Four supplied certificate images with keyboard-accessible enlargement and image downloads.
+**Databases & Tools**
+<p>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" />
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat&logo=visual-studio-code&logoColor=white" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" />
+  <img src="https://img.shields.io/badge/AutoCAD-E51050?style=flat&logo=autodesk&logoColor=white" />
+</p>
 
-A dedicated certificates page with all eight entries and the supplied Great Learning verification links.
+---
 
-A contact form that prepares a draft in the visitor's email app. It does not send mail automatically or claim that a message was sent.
+### 📌 Featured Projects
 
-Content notes
+| Project | Description | Tech Stack |
+|---|---|---|
+| [Ultimate Guessing Game](https://github.com/charankumar62/ultimate-guessing-game) | An interactive number/word guessing game | JavaScript |
+| [KCK Quiz App](https://github.com/charankumar62/kck-quiz-app) | A quiz application with dynamic scoring | JavaScript, CSS, HTML |
+| [GitHub Skills Project](https://github.com/charankumar62/skills-introduction-to-github) | Hands-on practice with Git & GitHub workflows | Git, GitHub, Markdown |
+| [KCK Brand Portfolio](https://github.com/charankumar62/Charan-Kumar-Kodidala-portfolio) | Personal portfolio website | CSS, HTML, JavaScript |
 
-The supplied ZIP contains three certificate JPG files, and the CodeAlpha Python Programming internship certificate is included as certificates/codealpha.jpeg. It does not include images or PDFs for the four Great Learning project certificates, so those entries link to the original verification URLs. No substitute certificates were generated.
+---
 
-Contact email and phone number are preserved from the original portfolio HTML: charankumarkodidala@gmail.com and +91 93903 45678. The uploaded README uses a different email address, charankumar2005kodidala@gmail.com; confirm which address you want before sharing the portfolio widely.
+### 📊 GitHub Stats
 
-All personal history and project links come from the supplied portfolio and existing site. External project links were retained, not independently verified.
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=charankumar62&show_icons=true&theme=default" alt="Charan's GitHub stats" height="165"/>
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=charankumar62" alt="Charan's GitHub streak" height="165"/>
+</p>
 
-Editing
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=charankumar62&layout=compact&theme=default" alt="Top Languages" height="165"/>
+</p>
 
-index.html: portfolio content and contact email.
+---
 
-certificates.html: certificate entries and verification links.
+### 🤝 Connect with Me
 
-styles.css: layout, colors, responsive rules, and animations.
+<p align="left">
+  <a href="https://github.com/charankumar62" target="_blank">GitHub</a> •
+  <a href="https://www.instagram.com/charan_kodidala/" target="_blank">Instagram</a> •
+  <a href="mailto:charankumar2005kodidala@gmail.com">Email</a>
+  <a href="https://charankumarkodidala.netlify.app/"target="_blank">Personal Portfolio</a> •
+</p>
 
-script.js: menu, motion preference, typed role, viewer, and email draft behavior.
-
-charan.jpg: original portrait.
-
-certificates/: original certificate images.
+<p align="center"><i>⭐ Building things, one commit at a time.</i></p>
